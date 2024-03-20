@@ -61,15 +61,15 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/dandan/ex4_supplied1/."
+					"path" : "/home/dandan/matam_4_files_local/matam_4_files/."
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/dandan/ex4_supplied1/Cards"
+					"path" : "/home/dandan/matam_4_files_local/matam_4_files/Cards"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/dandan/ex4_supplied1/Players"
+					"path" : "/home/dandan/matam_4_files_local/matam_4_files/Players"
 				}
 			],
 			"language" : "CXX",
@@ -87,7 +87,13 @@
 				2,
 				4,
 				6,
-				8
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
 			]
 		}
 	],
@@ -134,7 +140,13 @@
 				2,
 				4,
 				6,
-				8
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
 			]
 		}
 	],
@@ -188,6 +200,42 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Cards/Event.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Cards/Gang.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Cards/Giant.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Cards/Dragon.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Cards/Goblin.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Cards/Encounter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Cards/SolarEclipse.cpp",
 			"sourceGroupIndex" : 1
 		}
 	],

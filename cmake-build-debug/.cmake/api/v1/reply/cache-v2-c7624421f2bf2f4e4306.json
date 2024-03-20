@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/dandan/ex4_supplied1/cmake-build-debug"
+			"value" : "/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/dandan/ex4_supplied1"
+			"value" : "/home/dandan/matam_4_files_local/matam_4_files"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1247,7 +1247,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/dandan/ex4_supplied1/cmake-build-debug"
+			"value" : "/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug"
 		},
 		{
 			"name" : "ex4_supplied1_IS_TOP_LEVEL",
@@ -1271,7 +1271,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/dandan/ex4_supplied1"
+			"value" : "/home/dandan/matam_4_files_local/matam_4_files"
 		}
 	],
 	"kind" : "cache",

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dandan/ex4_supplied1
+CMAKE_SOURCE_DIR = /home/dandan/matam_4_files_local/matam_4_files
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dandan/ex4_supplied1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dandan/ex4_supplied1/cmake-build-debug/CMakeFiles /home/dandan/ex4_supplied1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles /home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dandan/ex4_supplied1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,54 @@ Cards/Card.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Card.cpp.s
 .PHONY : Cards/Card.cpp.s
 
+Cards/Dragon.o: Cards/Dragon.cpp.o
+.PHONY : Cards/Dragon.o
+
+# target to build an object file
+Cards/Dragon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Dragon.cpp.o
+.PHONY : Cards/Dragon.cpp.o
+
+Cards/Dragon.i: Cards/Dragon.cpp.i
+.PHONY : Cards/Dragon.i
+
+# target to preprocess a source file
+Cards/Dragon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Dragon.cpp.i
+.PHONY : Cards/Dragon.cpp.i
+
+Cards/Dragon.s: Cards/Dragon.cpp.s
+.PHONY : Cards/Dragon.s
+
+# target to generate assembly for a file
+Cards/Dragon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Dragon.cpp.s
+.PHONY : Cards/Dragon.cpp.s
+
+Cards/Encounter.o: Cards/Encounter.cpp.o
+.PHONY : Cards/Encounter.o
+
+# target to build an object file
+Cards/Encounter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Encounter.cpp.o
+.PHONY : Cards/Encounter.cpp.o
+
+Cards/Encounter.i: Cards/Encounter.cpp.i
+.PHONY : Cards/Encounter.i
+
+# target to preprocess a source file
+Cards/Encounter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Encounter.cpp.i
+.PHONY : Cards/Encounter.cpp.i
+
+Cards/Encounter.s: Cards/Encounter.cpp.s
+.PHONY : Cards/Encounter.s
+
+# target to generate assembly for a file
+Cards/Encounter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Encounter.cpp.s
+.PHONY : Cards/Encounter.cpp.s
+
 Cards/Event.o: Cards/Event.cpp.o
 .PHONY : Cards/Event.o
 
@@ -176,6 +224,102 @@ Cards/Event.s: Cards/Event.cpp.s
 Cards/Event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Event.cpp.s
 .PHONY : Cards/Event.cpp.s
+
+Cards/Gang.o: Cards/Gang.cpp.o
+.PHONY : Cards/Gang.o
+
+# target to build an object file
+Cards/Gang.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Gang.cpp.o
+.PHONY : Cards/Gang.cpp.o
+
+Cards/Gang.i: Cards/Gang.cpp.i
+.PHONY : Cards/Gang.i
+
+# target to preprocess a source file
+Cards/Gang.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Gang.cpp.i
+.PHONY : Cards/Gang.cpp.i
+
+Cards/Gang.s: Cards/Gang.cpp.s
+.PHONY : Cards/Gang.s
+
+# target to generate assembly for a file
+Cards/Gang.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Gang.cpp.s
+.PHONY : Cards/Gang.cpp.s
+
+Cards/Giant.o: Cards/Giant.cpp.o
+.PHONY : Cards/Giant.o
+
+# target to build an object file
+Cards/Giant.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Giant.cpp.o
+.PHONY : Cards/Giant.cpp.o
+
+Cards/Giant.i: Cards/Giant.cpp.i
+.PHONY : Cards/Giant.i
+
+# target to preprocess a source file
+Cards/Giant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Giant.cpp.i
+.PHONY : Cards/Giant.cpp.i
+
+Cards/Giant.s: Cards/Giant.cpp.s
+.PHONY : Cards/Giant.s
+
+# target to generate assembly for a file
+Cards/Giant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Giant.cpp.s
+.PHONY : Cards/Giant.cpp.s
+
+Cards/Goblin.o: Cards/Goblin.cpp.o
+.PHONY : Cards/Goblin.o
+
+# target to build an object file
+Cards/Goblin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.o
+.PHONY : Cards/Goblin.cpp.o
+
+Cards/Goblin.i: Cards/Goblin.cpp.i
+.PHONY : Cards/Goblin.i
+
+# target to preprocess a source file
+Cards/Goblin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.i
+.PHONY : Cards/Goblin.cpp.i
+
+Cards/Goblin.s: Cards/Goblin.cpp.s
+.PHONY : Cards/Goblin.s
+
+# target to generate assembly for a file
+Cards/Goblin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.s
+.PHONY : Cards/Goblin.cpp.s
+
+Cards/SolarEclipse.o: Cards/SolarEclipse.cpp.o
+.PHONY : Cards/SolarEclipse.o
+
+# target to build an object file
+Cards/SolarEclipse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.o
+.PHONY : Cards/SolarEclipse.cpp.o
+
+Cards/SolarEclipse.i: Cards/SolarEclipse.cpp.i
+.PHONY : Cards/SolarEclipse.i
+
+# target to preprocess a source file
+Cards/SolarEclipse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.i
+.PHONY : Cards/SolarEclipse.cpp.i
+
+Cards/SolarEclipse.s: Cards/SolarEclipse.cpp.s
+.PHONY : Cards/SolarEclipse.s
+
+# target to generate assembly for a file
+Cards/SolarEclipse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.s
+.PHONY : Cards/SolarEclipse.cpp.s
 
 Mtmchkin.o: Mtmchkin.cpp.o
 .PHONY : Mtmchkin.o
@@ -261,9 +405,27 @@ help:
 	@echo "... Cards/Card.o"
 	@echo "... Cards/Card.i"
 	@echo "... Cards/Card.s"
+	@echo "... Cards/Dragon.o"
+	@echo "... Cards/Dragon.i"
+	@echo "... Cards/Dragon.s"
+	@echo "... Cards/Encounter.o"
+	@echo "... Cards/Encounter.i"
+	@echo "... Cards/Encounter.s"
 	@echo "... Cards/Event.o"
 	@echo "... Cards/Event.i"
 	@echo "... Cards/Event.s"
+	@echo "... Cards/Gang.o"
+	@echo "... Cards/Gang.i"
+	@echo "... Cards/Gang.s"
+	@echo "... Cards/Giant.o"
+	@echo "... Cards/Giant.i"
+	@echo "... Cards/Giant.s"
+	@echo "... Cards/Goblin.o"
+	@echo "... Cards/Goblin.i"
+	@echo "... Cards/Goblin.s"
+	@echo "... Cards/SolarEclipse.o"
+	@echo "... Cards/SolarEclipse.i"
+	@echo "... Cards/SolarEclipse.s"
 	@echo "... Mtmchkin.o"
 	@echo "... Mtmchkin.i"
 	@echo "... Mtmchkin.s"

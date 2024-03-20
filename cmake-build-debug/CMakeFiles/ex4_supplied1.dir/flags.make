@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dandan/ex4_supplied1/. -I/home/dandan/ex4_supplied1/Cards -I/home/dandan/ex4_supplied1/Players
+CXX_INCLUDES = -I/home/dandan/matam_4_files_local/matam_4_files/. -I/home/dandan/matam_4_files_local/matam_4_files/Cards -I/home/dandan/matam_4_files_local/matam_4_files/Players
 
 CXX_FLAGS = -g
 

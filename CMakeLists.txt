@@ -16,4 +16,17 @@ add_executable(ex4_supplied1
         utilities.h
         Cards/Card.cpp
         Cards/Card.h
-        Cards/Event.cpp)
+        Cards/Event.cpp
+        Cards/Gang.cpp
+        Cards/Giant.cpp
+        Cards/Dragon.cpp
+        Cards/Goblin.cpp
+        Cards/Encounter.cpp
+        Cards/SolarEclipse.cpp
+        Cards/Event.h
+        Cards/Gang.h
+        Cards/Giant.h
+        Cards/Dragon.h
+        Cards/Goblin.h
+        Cards/Encounter.h
+        Cards/SolarEclipse.h)
