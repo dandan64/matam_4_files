@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ex4_supplied1.dir/main.cpp.o CMakeFiles/ex4_supplied1.dir/Mtmchkin.cpp.o CMakeFiles/ex4_supplied1.dir/utilities.cpp.o CMakeFiles/ex4_supplied1.dir/Cards/Card.cpp.o CMakeFiles/ex4_supplied1.dir/Cards/Event.cpp.o -o ex4_supplied1 
