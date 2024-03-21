@@ -28,7 +28,7 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
         loot += encounter.getLoot();
         damage += encounter.getDamage();
     }
-    m_cards.emplace_back(std::make_unique<Gang>(combatPower,loot, damage));
+    m_cards.emplace_back(std::make_unique<Gang>(combatPower,loot, damage, num));
 
 }
 void InitializeGoblin(vector<std::unique_ptr<Card>>& m_cards){
@@ -130,7 +130,7 @@ void checkIfLineLegal(const std::string& line){
     }
 }
 
-void readAndInitializePlayer(std::istream& playerFile, vector<Player*>& m_plyaers){
+void readAndInitializePlayer(std::istream& playerFile, vector<std::unique_ptr<Player>>& m_plyaers){
     std::string line;
     while (std::getline(playerFile, line)){
         checkIfLineLegal(line);

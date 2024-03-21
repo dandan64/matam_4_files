@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/dandan/matam_4_files_local/matam_4_files/. -I/home/dandan/matam_4_files_local/matam_4_files/Cards -I/home/dandan/matam_4_files_local/matam_4_files/Players
 
-CXX_FLAGS = -g
+CXX_FLAGS = -g -std=gnu++14
 
