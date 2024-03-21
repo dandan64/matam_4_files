@@ -67,7 +67,7 @@ void Player::addCoins(int amount){ //will it be different for each player?
     m_coins+=amount;
 }
 
-void Player::reduceHealthpoints(int amount){
+void Player::reduceHealthPoints(int amount){
     m_coins-=amount;
     if(m_coins<0)
         m_coins = 0;

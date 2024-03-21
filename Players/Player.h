@@ -86,7 +86,7 @@ public:
     void addCoins(int amount);
 
     //looses hp according to the amount it gets not less than 0
-    void reduceHealthpoints(int anount);
+    void reduceHealthPoints(int amount);
 
     //playing the card of the event PotionsMerchant
     //different implamentaion for each Job
