@@ -345,6 +345,78 @@ Mtmchkin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Mtmchkin.cpp.s
 .PHONY : Mtmchkin.cpp.s
 
+Players/Behavior.o: Players/Behavior.cpp.o
+.PHONY : Players/Behavior.o
+
+# target to build an object file
+Players/Behavior.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o
+.PHONY : Players/Behavior.cpp.o
+
+Players/Behavior.i: Players/Behavior.cpp.i
+.PHONY : Players/Behavior.i
+
+# target to preprocess a source file
+Players/Behavior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.i
+.PHONY : Players/Behavior.cpp.i
+
+Players/Behavior.s: Players/Behavior.cpp.s
+.PHONY : Players/Behavior.s
+
+# target to generate assembly for a file
+Players/Behavior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.s
+.PHONY : Players/Behavior.cpp.s
+
+Players/Job.o: Players/Job.cpp.o
+.PHONY : Players/Job.o
+
+# target to build an object file
+Players/Job.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o
+.PHONY : Players/Job.cpp.o
+
+Players/Job.i: Players/Job.cpp.i
+.PHONY : Players/Job.i
+
+# target to preprocess a source file
+Players/Job.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.i
+.PHONY : Players/Job.cpp.i
+
+Players/Job.s: Players/Job.cpp.s
+.PHONY : Players/Job.s
+
+# target to generate assembly for a file
+Players/Job.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.s
+.PHONY : Players/Job.cpp.s
+
+Players/player.o: Players/player.cpp.o
+.PHONY : Players/player.o
+
+# target to build an object file
+Players/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o
+.PHONY : Players/player.cpp.o
+
+Players/player.i: Players/player.cpp.i
+.PHONY : Players/player.i
+
+# target to preprocess a source file
+Players/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/player.cpp.i
+.PHONY : Players/player.cpp.i
+
+Players/player.s: Players/player.cpp.s
+.PHONY : Players/player.s
+
+# target to generate assembly for a file
+Players/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/player.cpp.s
+.PHONY : Players/player.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -429,6 +501,15 @@ help:
 	@echo "... Mtmchkin.o"
 	@echo "... Mtmchkin.i"
 	@echo "... Mtmchkin.s"
+	@echo "... Players/Behavior.o"
+	@echo "... Players/Behavior.i"
+	@echo "... Players/Behavior.s"
+	@echo "... Players/Job.o"
+	@echo "... Players/Job.i"
+	@echo "... Players/Job.s"
+	@echo "... Players/player.o"
+	@echo "... Players/player.i"
+	@echo "... Players/player.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

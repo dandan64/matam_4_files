@@ -10,6 +10,13 @@
 #include "Cards/Dragon.h"
 #include "Cards/Giant.h"
 #include "Cards/SolarEclipse.h"
+#include "Players/Behavior.h"
+#include "Players/Job.h"
+#include "Players/Sorcerer.h"
+#include "Players/Warrior.h"
+#include "Players/RiskTaking.h"
+#include "Players/Responsible.h"
+#include "Players/SelectTypes.h"
 
 
 
@@ -18,6 +25,9 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
     vector<std::unique_ptr<Card>> tmpCards;
     int num = 0;
     deckFile>>num;
+    if(deckFile.bad() || deckFile.fail() || num < 2){
+       throw "Invalid Cards File";
+    }
     for(int i = 0; i < num; ++i){
         InitializeCard(deckFile, tmpCards);
     }
@@ -29,8 +39,8 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
         damage += encounter.getDamage();
     }
     m_cards.emplace_back(std::make_unique<Gang>(combatPower,loot, damage, num));
-
 }
+
 void InitializeGoblin(vector<std::unique_ptr<Card>>& m_cards){
     m_cards.emplace_back(std::make_unique<Goblin>());
 }
@@ -74,10 +84,9 @@ void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
 
 void readAndInitializeCards(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_cards){
     std::string line;
-    while(!deckFile.eof()){
+    while(!deckFile.eof()) {
         InitializeCard(deckFile, m_cards);
     }
-
 }
 
 bool checkFirstWord(const std::string& name){
@@ -130,7 +139,7 @@ void checkIfLineLegal(const std::string& line){
     }
 }
 
-void readAndInitializePlayer(std::istream& playerFile, vector<std::unique_ptr<Player>>& m_plyaers){
+void readAndInitializePlayer(std::istream& playerFile, vector<std::unique_ptr<Player>>& m_players){
     std::string line;
     while (std::getline(playerFile, line)){
         checkIfLineLegal(line);
@@ -138,7 +147,10 @@ void readAndInitializePlayer(std::istream& playerFile, vector<std::unique_ptr<Pl
         std::string name, job, behavior;
         iss >> name >> job >> behavior;
 
-        //call the ctor....
+        std::shared_ptr<Behavior> pBehavior = selectBehavior(behavior);
+        std::shared_ptr<Job> pJob = jobKind(job);
+
+        m_players.emplace_back(std::make_unique<Player>(name, pBehavior, pJob));
     }
 }
 
@@ -151,6 +163,7 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     if(!deckFile.is_open()){
         throw "Invalid Cards File";
     }
+    //deckFile.exceptions(std::ios::badbit | std::ios::eofbit | std::ios::failbit);
     readAndInitializeCards(deckFile, m_cards);
 
 

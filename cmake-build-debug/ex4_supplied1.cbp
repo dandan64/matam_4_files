@@ -142,7 +142,22 @@
 		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Mtmchkin.h">
 			<Option target="ex4_supplied1"/>
 		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Behavior.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Behavior.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Job.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Job.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
 		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Player.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/player.cpp">
 			<Option target="ex4_supplied1"/>
 		</Unit>
 		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/main.cpp">

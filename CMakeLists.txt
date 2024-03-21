@@ -29,4 +29,7 @@ add_executable(ex4_supplied1
         Cards/Dragon.h
         Cards/Goblin.h
         Cards/Encounter.h
-        Cards/SolarEclipse.h)
+        Cards/SolarEclipse.h
+        Players/player.cpp
+        Players/Behavior.cpp
+        Players/Job.cpp)

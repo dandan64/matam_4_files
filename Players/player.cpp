@@ -12,7 +12,8 @@ using std::string;
 
 
 
-Player::Player(string name,Behavior* behavior, Job* job ):m_name(name), m_behavior(behavior), m_job(job){};
+Player::Player(const string& name, const std::shared_ptr<Behavior>& behavior, const std::shared_ptr<Job>& job):
+    m_name(name), m_behavior(behavior), m_job(job){};
 
 
 string Player::getName() const{

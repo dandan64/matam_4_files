@@ -128,4 +128,25 @@ CMakeFiles/ex4_supplied1.dir/Cards/Card.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/dandan/matam_4_files_local/matam_4_files/Cards/../Players/Player.h
+ /home/dandan/matam_4_files_local/matam_4_files/Cards/../Players/Player.h \
+ /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h /usr/include/c++/11/typeinfo \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/exception \
+ /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h

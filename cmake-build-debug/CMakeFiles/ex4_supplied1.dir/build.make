@@ -223,6 +223,48 @@ CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dandan/matam_4_files_local/matam_4_files/Cards/SolarEclipse.cpp -o CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.s
 
+CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o: CMakeFiles/ex4_supplied1.dir/flags.make
+CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o: ../Players/player.cpp
+CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o: CMakeFiles/ex4_supplied1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o -MF CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o.d -o CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o -c /home/dandan/matam_4_files_local/matam_4_files/Players/player.cpp
+
+CMakeFiles/ex4_supplied1.dir/Players/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex4_supplied1.dir/Players/player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dandan/matam_4_files_local/matam_4_files/Players/player.cpp > CMakeFiles/ex4_supplied1.dir/Players/player.cpp.i
+
+CMakeFiles/ex4_supplied1.dir/Players/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex4_supplied1.dir/Players/player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dandan/matam_4_files_local/matam_4_files/Players/player.cpp -o CMakeFiles/ex4_supplied1.dir/Players/player.cpp.s
+
+CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o: CMakeFiles/ex4_supplied1.dir/flags.make
+CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o: ../Players/Behavior.cpp
+CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o: CMakeFiles/ex4_supplied1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o -MF CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o.d -o CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o -c /home/dandan/matam_4_files_local/matam_4_files/Players/Behavior.cpp
+
+CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dandan/matam_4_files_local/matam_4_files/Players/Behavior.cpp > CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.i
+
+CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dandan/matam_4_files_local/matam_4_files/Players/Behavior.cpp -o CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.s
+
+CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o: CMakeFiles/ex4_supplied1.dir/flags.make
+CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o: ../Players/Job.cpp
+CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o: CMakeFiles/ex4_supplied1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o -MF CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o.d -o CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o -c /home/dandan/matam_4_files_local/matam_4_files/Players/Job.cpp
+
+CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dandan/matam_4_files_local/matam_4_files/Players/Job.cpp > CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.i
+
+CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dandan/matam_4_files_local/matam_4_files/Players/Job.cpp -o CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.s
+
 # Object files for target ex4_supplied1
 ex4_supplied1_OBJECTS = \
 "CMakeFiles/ex4_supplied1.dir/main.cpp.o" \
@@ -235,7 +277,10 @@ ex4_supplied1_OBJECTS = \
 "CMakeFiles/ex4_supplied1.dir/Cards/Dragon.cpp.o" \
 "CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.o" \
 "CMakeFiles/ex4_supplied1.dir/Cards/Encounter.cpp.o" \
-"CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.o"
+"CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.o" \
+"CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o" \
+"CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o" \
+"CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o"
 
 # External object files for target ex4_supplied1
 ex4_supplied1_EXTERNAL_OBJECTS =
@@ -251,9 +296,12 @@ ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Cards/Dragon.cpp.o
 ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.o
 ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Cards/Encounter.cpp.o
 ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.o
+ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o
+ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o
+ex4_supplied1: CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o
 ex4_supplied1: CMakeFiles/ex4_supplied1.dir/build.make
 ex4_supplied1: CMakeFiles/ex4_supplied1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ex4_supplied1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ex4_supplied1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex4_supplied1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

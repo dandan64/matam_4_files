@@ -17,6 +17,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/dandan/matam_4_files_local/matam_4_files/Cards/Goblin.cpp" "CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/Cards/Goblin.cpp.o.d"
   "/home/dandan/matam_4_files_local/matam_4_files/Cards/SolarEclipse.cpp" "CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/Cards/SolarEclipse.cpp.o.d"
   "/home/dandan/matam_4_files_local/matam_4_files/Mtmchkin.cpp" "CMakeFiles/ex4_supplied1.dir/Mtmchkin.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/Mtmchkin.cpp.o.d"
+  "/home/dandan/matam_4_files_local/matam_4_files/Players/Behavior.cpp" "CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/Players/Behavior.cpp.o.d"
+  "/home/dandan/matam_4_files_local/matam_4_files/Players/Job.cpp" "CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.o.d"
+  "/home/dandan/matam_4_files_local/matam_4_files/Players/player.cpp" "CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/Players/player.cpp.o.d"
   "/home/dandan/matam_4_files_local/matam_4_files/main.cpp" "CMakeFiles/ex4_supplied1.dir/main.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/main.cpp.o.d"
   "/home/dandan/matam_4_files_local/matam_4_files/utilities.cpp" "CMakeFiles/ex4_supplied1.dir/utilities.cpp.o" "gcc" "CMakeFiles/ex4_supplied1.dir/utilities.cpp.o.d"
   )

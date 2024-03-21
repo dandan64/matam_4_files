@@ -2,8 +2,7 @@
 #pragma once
 
 #include <string>
-// #include "Job.h"
-// #include "Behavior.h"
+#include <memory>
 
 class Behavior;
 class Job;
@@ -23,11 +22,11 @@ public:
     int m_coins =10 ;
 
     string m_name;
-    Behavior* m_behavior;
-    Job* m_job;
+    std::shared_ptr<Behavior> m_behavior;
+    std::shared_ptr<Job> m_job;
     
 
-    Player(string name,Behavior* behavior, Job* job );  //distructor?
+    Player(const string& name, const std::shared_ptr<Behavior>& behavior, const std::shared_ptr<Job>& job);  //distructor?
 
     Player()=default;
 
