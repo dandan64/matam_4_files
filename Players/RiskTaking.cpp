@@ -12,3 +12,4 @@ void RiskTaking :: makePotionsMerchant(Player& player){
 string RiskTaking::getBehavior(){
    return "RiskTaking";
 }
+

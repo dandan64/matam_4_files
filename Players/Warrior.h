@@ -1,3 +1,6 @@
+#ifndef WARRIOR_H
+#define WARRIOR_H
+
 #include "Job.h"
 
 class Warrior : public Job
@@ -7,3 +10,5 @@ class Warrior : public Job
     virtual void makeSolarEclipse(Player& ) override;
     virtual string getJob() override;
 };
+
+#endif

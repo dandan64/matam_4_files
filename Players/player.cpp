@@ -56,18 +56,18 @@ bool Player::buyPotion(){ //should I do it with true/false?
 }
 
 void Player::playPotionsMerchant(){
-    m_job->makeSolarEclipse(*this);
+    m_behavior->makePotionsMerchant(*this);
 }
 
 void Player::playSolarEclipse(){
     m_job->makeSolarEclipse(*this);
 }
 
-void Player::getCoins(int amount){ //will it be different for each player?
+void Player::addCoins(int amount){ //will it be different for each player?
     m_coins+=amount;
 }
 
-void Player::loseHp(int amount){
+void Player::reduceHealthpoints(int amount){
     m_coins-=amount;
     if(m_coins<0)
         m_coins = 0;
