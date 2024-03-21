@@ -2,11 +2,36 @@
 #pragma once
 
 #include <string>
+// #include "Job.h"
+// #include "Behavior.h"
+
+class Behavior;
+class Job;
 
 using std::string;
+static const int PRICE_POTION = 5;
+static const int HEALTH_ADDITION = 10;
+static const int MAX_HP = 100;
+
+
 
 class Player {
 public:
+    int m_level = 1; 
+    int m_force = 5;
+    int m_hp = 100;
+    int m_coins =10 ;
+
+    string m_name;
+    Behavior* m_behavior;
+    Job* m_job;
+    
+
+    Player(string name,Behavior* behavior, Job* job );  //distructor?
+
+    Player()=default;
+
+
     /**
      * Gets the description of the player
      * 
@@ -48,8 +73,28 @@ public:
      * @return - coins of the player
     */
     int getCoins() const;
-    void levelUp();
-    void addCoins(int amount);
-    void reduceHealthPoints(int amount);
-    void worrierReduceHP();
+
+    //adds one point
+    void addPointForce();
+
+    //loses one point
+    void losePointForce();
+
+    //buys a potion accordine to the player's behavior
+    bool buyPotion();
+
+    //gets the amount of coins according the amount it
+    void getCoins(int amount);
+
+    //looses hp according to the amount it gets not less than 0
+    void loseHp(int anount);
+
+    //playing the card of the event PotionsMerchant
+    //different implamentaion for each Job
+    void playPotionsMerchant();
+    
+    //playing the card of the event Solar Eclipse adds a point to a soccreer
+    //loses a point to any other job
+    void playSolarEclipse();
+   
 };
