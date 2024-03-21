@@ -1,3 +1,6 @@
+#ifndef SORCERER_H
+#define SORCERER_H
+
 #include "Job.h"
 
 class Sorcerer : public Job{
@@ -7,3 +10,5 @@ class Sorcerer : public Job{
     virtual string getJob() override;
 
 };
+
+#endif 

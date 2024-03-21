@@ -83,10 +83,10 @@ public:
     bool buyPotion();
 
     //gets the amount of coins according the amount it
-    void getCoins(int amount);
+    void addCoins(int amount);
 
     //looses hp according to the amount it gets not less than 0
-    void loseHp(int anount);
+    void reduceHealthpoints(int anount);
 
     //playing the card of the event PotionsMerchant
     //different implamentaion for each Job

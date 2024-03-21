@@ -1,3 +1,4 @@
+
 #include "SelectTypes.h"
 
 
@@ -10,6 +11,9 @@ unique_ptr<Behavior> selectBehavior(string behavior){ //put in a different file
         unique_ptr<Behavior> riskTakingToReturn =std::make_unique<RiskTaking>();
         return riskTakingToReturn;
     }
+    throw "Invalid Cards File";
+
+    
 }
 
 unique_ptr<Job> jobKind (string kind){
@@ -21,5 +25,8 @@ unique_ptr<Job> jobKind (string kind){
         unique_ptr<Job> sorcerer = std::make_unique<Sorcerer>();
         return sorcerer;
     }
+    throw "Invalid Cards File";
+
 }
+
 
