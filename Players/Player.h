@@ -95,5 +95,7 @@ public:
     //playing the card of the event Solar Eclipse adds a point to a soccreer
     //loses a point to any other job
     void playSolarEclipse();
+
+    void levelUp();
    
 };

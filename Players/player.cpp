@@ -83,3 +83,6 @@ string Player::getDescription() const{
     return description.str();
 }
 
+void Player::levelUp(){
+    m_level++;
+}
