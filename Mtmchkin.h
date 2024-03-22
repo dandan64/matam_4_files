@@ -18,7 +18,7 @@ class Mtmchkin{
 private:
     int m_turnIndex;
     std::vector<std::unique_ptr<Card>> m_cards;
-    std::vector<std::unique_ptr<Player>> m_players;
+    std::vector<std::shared_ptr<Player>> m_players;
 //    int sizeOfPlayer = m_players.size();
 //    int sizeOfCards = m_cards.size();
 
@@ -68,7 +68,7 @@ public:
     //rank players to print later
     void rankPlayers()const;
 
-    bool comparePlayers(std::unique_ptr<Player*>,std::unique_ptr<Player*>);
+    static bool comparePlayers(std::unique_ptr<Player*>,std::unique_ptr<Player*>);
 };
 
 void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_cards);

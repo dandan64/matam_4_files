@@ -143,7 +143,7 @@ void checkIfLineLegal(const std::string& line){
     }
 }
 
-void readAndInitializePlayer(std::istream& playerFile, vector<std::unique_ptr<Player>>& m_players){
+void readAndInitializePlayer(std::istream& playerFile, vector<std::shared_ptr<Player>>& m_players){
     std::string line;
     while (std::getline(playerFile, line)){
         checkIfLineLegal(line);
@@ -154,7 +154,7 @@ void readAndInitializePlayer(std::istream& playerFile, vector<std::unique_ptr<Pl
         std::shared_ptr<Behavior> pBehavior = selectBehavior(behavior);
         std::shared_ptr<Job> pJob = jobKind(job);
 
-        m_players.emplace_back(std::make_unique<Player>(name, pBehavior, pJob));
+        m_players.emplace_back(std::make_shared<Player>(name, pBehavior, pJob));
     }
 }
 
@@ -245,7 +245,7 @@ bool Mtmchkin::isGameOver() const {
 }
 
 
-bool comparePlayers(const std::unique_ptr<Player>& player1,const std::unique_ptr<Player>& player2){
+static bool comparePlayers(const std::shared_ptr<Player>& player1,const std::shared_ptr<Player>& player2){
     if(player1->getLevel() != player2->getLevel())
         return player1->getLevel() > player2->getLevel();
     if(player1->getCoins() != player2->getCoins())
@@ -254,7 +254,7 @@ bool comparePlayers(const std::unique_ptr<Player>& player1,const std::unique_ptr
 }
 
 void Mtmchkin::rankPlayers()const{
-    std::vector<std::unique_ptr<Player>> tmp_player = m_players;
+    std::vector<std::shared_ptr<Player>> tmp_player = m_players;
     for(const auto& player : tmp_player){
         std::sort(tmp_player.begin(), tmp_player.end(), comparePlayers);
     }
