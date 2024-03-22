@@ -12,8 +12,6 @@ unique_ptr<Behavior> selectBehavior(string behavior){ //put in a different file
         return riskTakingToReturn;
     }
     throw "Invalid Cards File";
-
-    
 }
 
 unique_ptr<Job> jobKind (string kind){

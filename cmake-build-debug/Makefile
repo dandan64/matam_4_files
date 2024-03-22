@@ -393,6 +393,126 @@ Players/Job.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Job.cpp.s
 .PHONY : Players/Job.cpp.s
 
+Players/Responsible.o: Players/Responsible.cpp.o
+.PHONY : Players/Responsible.o
+
+# target to build an object file
+Players/Responsible.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Responsible.cpp.o
+.PHONY : Players/Responsible.cpp.o
+
+Players/Responsible.i: Players/Responsible.cpp.i
+.PHONY : Players/Responsible.i
+
+# target to preprocess a source file
+Players/Responsible.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Responsible.cpp.i
+.PHONY : Players/Responsible.cpp.i
+
+Players/Responsible.s: Players/Responsible.cpp.s
+.PHONY : Players/Responsible.s
+
+# target to generate assembly for a file
+Players/Responsible.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Responsible.cpp.s
+.PHONY : Players/Responsible.cpp.s
+
+Players/RiskTaking.o: Players/RiskTaking.cpp.o
+.PHONY : Players/RiskTaking.o
+
+# target to build an object file
+Players/RiskTaking.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/RiskTaking.cpp.o
+.PHONY : Players/RiskTaking.cpp.o
+
+Players/RiskTaking.i: Players/RiskTaking.cpp.i
+.PHONY : Players/RiskTaking.i
+
+# target to preprocess a source file
+Players/RiskTaking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/RiskTaking.cpp.i
+.PHONY : Players/RiskTaking.cpp.i
+
+Players/RiskTaking.s: Players/RiskTaking.cpp.s
+.PHONY : Players/RiskTaking.s
+
+# target to generate assembly for a file
+Players/RiskTaking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/RiskTaking.cpp.s
+.PHONY : Players/RiskTaking.cpp.s
+
+Players/SelectTypes.o: Players/SelectTypes.cpp.o
+.PHONY : Players/SelectTypes.o
+
+# target to build an object file
+Players/SelectTypes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/SelectTypes.cpp.o
+.PHONY : Players/SelectTypes.cpp.o
+
+Players/SelectTypes.i: Players/SelectTypes.cpp.i
+.PHONY : Players/SelectTypes.i
+
+# target to preprocess a source file
+Players/SelectTypes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/SelectTypes.cpp.i
+.PHONY : Players/SelectTypes.cpp.i
+
+Players/SelectTypes.s: Players/SelectTypes.cpp.s
+.PHONY : Players/SelectTypes.s
+
+# target to generate assembly for a file
+Players/SelectTypes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/SelectTypes.cpp.s
+.PHONY : Players/SelectTypes.cpp.s
+
+Players/Socreer.o: Players/Socreer.cpp.o
+.PHONY : Players/Socreer.o
+
+# target to build an object file
+Players/Socreer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Socreer.cpp.o
+.PHONY : Players/Socreer.cpp.o
+
+Players/Socreer.i: Players/Socreer.cpp.i
+.PHONY : Players/Socreer.i
+
+# target to preprocess a source file
+Players/Socreer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Socreer.cpp.i
+.PHONY : Players/Socreer.cpp.i
+
+Players/Socreer.s: Players/Socreer.cpp.s
+.PHONY : Players/Socreer.s
+
+# target to generate assembly for a file
+Players/Socreer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Socreer.cpp.s
+.PHONY : Players/Socreer.cpp.s
+
+Players/Warrior.o: Players/Warrior.cpp.o
+.PHONY : Players/Warrior.o
+
+# target to build an object file
+Players/Warrior.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Warrior.cpp.o
+.PHONY : Players/Warrior.cpp.o
+
+Players/Warrior.i: Players/Warrior.cpp.i
+.PHONY : Players/Warrior.i
+
+# target to preprocess a source file
+Players/Warrior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Warrior.cpp.i
+.PHONY : Players/Warrior.cpp.i
+
+Players/Warrior.s: Players/Warrior.cpp.s
+.PHONY : Players/Warrior.s
+
+# target to generate assembly for a file
+Players/Warrior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex4_supplied1.dir/build.make CMakeFiles/ex4_supplied1.dir/Players/Warrior.cpp.s
+.PHONY : Players/Warrior.cpp.s
+
 Players/player.o: Players/player.cpp.o
 .PHONY : Players/player.o
 
@@ -507,6 +627,21 @@ help:
 	@echo "... Players/Job.o"
 	@echo "... Players/Job.i"
 	@echo "... Players/Job.s"
+	@echo "... Players/Responsible.o"
+	@echo "... Players/Responsible.i"
+	@echo "... Players/Responsible.s"
+	@echo "... Players/RiskTaking.o"
+	@echo "... Players/RiskTaking.i"
+	@echo "... Players/RiskTaking.s"
+	@echo "... Players/SelectTypes.o"
+	@echo "... Players/SelectTypes.i"
+	@echo "... Players/SelectTypes.s"
+	@echo "... Players/Socreer.o"
+	@echo "... Players/Socreer.i"
+	@echo "... Players/Socreer.s"
+	@echo "... Players/Warrior.o"
+	@echo "... Players/Warrior.i"
+	@echo "... Players/Warrior.s"
 	@echo "... Players/player.o"
 	@echo "... Players/player.i"
 	@echo "... Players/player.s"

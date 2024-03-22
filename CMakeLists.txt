@@ -32,4 +32,9 @@ add_executable(ex4_supplied1
         Cards/SolarEclipse.h
         Players/player.cpp
         Players/Behavior.cpp
-        Players/Job.cpp)
+        Players/Job.cpp
+        Players/SelectTypes.cpp
+        Players/Responsible.cpp
+        Players/RiskTaking.cpp
+        Players/Warrior.cpp
+        Players/Socreer.cpp)

@@ -157,6 +157,33 @@
 		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Player.h">
 			<Option target="ex4_supplied1"/>
 		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Responsible.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Responsible.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/RiskTaking.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/RiskTaking.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/SelectTypes.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/SelectTypes.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Socreer.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Warrior.cpp">
+			<Option target="ex4_supplied1"/>
+		</Unit>
+		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/Warrior.h">
+			<Option target="ex4_supplied1"/>
+		</Unit>
 		<Unit filename="/home/dandan/matam_4_files_local/matam_4_files/Players/player.cpp">
 			<Option target="ex4_supplied1"/>
 		</Unit>
