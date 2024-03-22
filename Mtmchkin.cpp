@@ -245,19 +245,16 @@ bool Mtmchkin::isGameOver() const {
 }
 
 
-static bool comparePlayers(const std::shared_ptr<Player>& player1,const std::shared_ptr<Player>& player2){
-    if(player1->getLevel() != player2->getLevel())
-        return player1->getLevel() > player2->getLevel();
-    if(player1->getCoins() != player2->getCoins())
-        return player1->getCoins() > player2->getCoins();
-    return player1->getName() < player2->getName();
-}
 
 void Mtmchkin::rankPlayers()const{
     std::vector<std::shared_ptr<Player>> tmp_player = m_players;
-    for(const auto& player : tmp_player){
-        std::sort(tmp_player.begin(), tmp_player.end(), comparePlayers);
-    }
+    std::sort(tmp_player.begin(), tmp_player.end(), [](auto const& player1, auto const& player2){
+        if(player1->getLevel() != player2->getLevel())
+            return player1->getLevel() > player2->getLevel();
+        if(player1->getCoins() != player2->getCoins())
+            return player1->getCoins() > player2->getCoins();
+        return player1->getName() < player2->getName();
+    });
 }
 
 

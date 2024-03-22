@@ -68,7 +68,6 @@ public:
     //rank players to print later
     void rankPlayers()const;
 
-    static bool comparePlayers(std::unique_ptr<Player*>,std::unique_ptr<Player*>);
 };
 
 void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_cards);
