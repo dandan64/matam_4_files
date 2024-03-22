@@ -263,4 +263,17 @@ void Mtmchkin::play() {
     /*===== TODO: Print either a "winner" message or "no winner" message =====*/
 
     /*========================================================================*/
+    int knockedOut = 0;
+    for(const auto & playerPtr : m_players){
+        if(playerPtr->getLevel() == MAX_LEVEL) {
+            printWinner(*playerPtr);
+            break;
+        }
+        if(playerPtr->getHealthPoints() == 0) {
+            knockedOut++;
+        }
+    }
+    if(knockedOut < m_players.size()){
+        printNoWinners();
+    }
 }
