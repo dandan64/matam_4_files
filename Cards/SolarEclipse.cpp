@@ -3,3 +3,9 @@
 //
 
 #include "SolarEclipse.h"
+#include "Player.h"
+
+
+void SolarEclipse::applyEncounter(Player& player) const{
+    player.playSolarEclipse();
+}
