@@ -1,3 +1,0 @@
-/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles/ex4_supplied1.dir
-/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dandan/matam_4_files_local/matam_4_files/cmake-build-debug/CMakeFiles/rebuild_cache.dir

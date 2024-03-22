@@ -12,6 +12,8 @@
 #include "Cards/SolarEclipse.h"
 #include "Players/Behavior.h"
 #include "Players/Job.h"
+#include "Cards/PotionsMerchant.h"
+#include "Cards/Event.h"
 #include "Players/Sorcerer.h"
 #include "Players/Warrior.h"
 #include "Players/RiskTaking.h"
@@ -193,15 +195,8 @@ void Mtmchkin::playTurn(Player& player) {
     */
     int cardToPlay = m_turnIndex % m_cards.size();
     printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay]);
-    const SolarEclipse* solarEclipse = dynamic_cast<SolarEclipse*>(m_cards[cardToPlay].get());
-    if(solarEclipse == nullptr){
-        m_cards[cardToPlay]->applyEncounter(player);
-    }
-    else{
-        for(const auto& playerPtr : m_players){
-            m_cards[cardToPlay]->applyEncounter(*playerPtr);
-        }
-    }
+    m_cards[cardToPlay]->applyEncounter(player);
+
 
     m_turnIndex++;
 }
@@ -212,14 +207,11 @@ void Mtmchkin::playRound() {
     /*===== TODO: Play a turn for each player =====*/
 
     /*=============================================*/
-    //int playerToPlay = m_turnIndex % m_players.size();
     for(const auto & playerToPlay : m_players){
-        //if(player not nocked out)
-        playTurn(*playerToPlay);
+        if(!playerToPlay->isKnockedOut()) {
+            playTurn(*playerToPlay);
+        }
     }
-
-
-    //playTurn(*m_players[playerToPlay]);
 
     printRoundEnd();
 
