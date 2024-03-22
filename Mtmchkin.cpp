@@ -255,6 +255,10 @@ void Mtmchkin::rankPlayers()const{
             return player1->getCoins() > player2->getCoins();
         return player1->getName() < player2->getName();
     });
+    int index = 0;
+    for(const auto & player_ptr : tmp_player){
+        printLeaderBoardEntry(index++, *player_ptr);
+    }
 }
 
 
@@ -289,7 +293,7 @@ void Mtmchkin::play() {
             knockedOut++;
         }
     }
-    if(knockedOut < m_players.size()){
+    if(knockedOut == m_players.size()){
         printNoWinners();
     }
 }
