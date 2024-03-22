@@ -22,7 +22,9 @@ for i in fileTests/inFiles/test*.in; do
     echo "Running test $testNumber >>>"
 
     # Run the game simulation and output results to a file
+    set -v
     ./FileTester "fileTests/inFiles/test${testNumber}.deck" "$i" "fileTests/outFiles/test${testNumber}.result"
+    unset -v
 
     # Compare the generated result with the expected result
     if diff "fileTests/outFiles/test${testNumber}.out" "fileTests/outFiles/test${testNumber}.result" > /dev/null; then

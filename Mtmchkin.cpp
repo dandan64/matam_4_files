@@ -30,7 +30,7 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
     int num = 0;
     deckFile>>num;
     if(deckFile.bad() || deckFile.fail() || num < 2){
-       throw "Invalid Cards File";
+        throw std::runtime_error("Invalid Players File");
     }
     for(int i = 0; i < num; ++i){
         InitializeCard(deckFile, tmpCards);
@@ -42,23 +42,23 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
         loot += encounter.getLoot();
         damage += encounter.getDamage();
     }
-    m_cards.emplace_back(std::make_unique<Gang>(combatPower,loot, damage, num));
+    m_cards.emplace_back(new Gang(combatPower,loot, damage, num));
 }
 
 void InitializeGoblin(vector<std::unique_ptr<Card>>& m_cards){
-    m_cards.emplace_back(std::make_unique<Goblin>());
+    m_cards.emplace_back(new Goblin());
 }
 void InitializeGiant(vector<std::unique_ptr<Card>>& m_cards){
-    m_cards.emplace_back(std::make_unique<Giant>());
+    m_cards.emplace_back(new Giant());
 }
 void InitializeDragon(vector<std::unique_ptr<Card>>& m_cards){
-    m_cards.emplace_back(std::make_unique<Dragon>());
+    m_cards.emplace_back(new Dragon());
 }
 void InitializeSolarEclipse(vector<std::unique_ptr<Card>>&m_cards){
-    m_cards.emplace_back(std::make_unique<SolarEclipse>());
+    m_cards.emplace_back(new SolarEclipse());
 }
 void InitializePotionsMerchant(vector<std::unique_ptr<Card>>& m_cards){
-
+    m_cards.emplace_back(new PotionsMerchant());
 }
 void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_cards){
     std::string word;
@@ -82,7 +82,7 @@ void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
      InitializePotionsMerchant(m_cards);
     }
     else{
-     throw "Invalid Cards File";
+        throw std::runtime_error("Invalid Players File");
     }
 }
 
@@ -128,18 +128,18 @@ void checkIfLineLegal(const std::string& line){
     std::string word;
     iss>>word;
     if (!checkFirstWord(word)) {
-        throw "Invalid Players File";
+        throw std::runtime_error("Invalid Players File");
     }
     iss >> word;
     if (!checkSecondWord(word)) {
-        throw "Invalid Players File";
+        throw std::runtime_error("Invalid Players File");
     }
     iss >> word;
     if (!checkThirdWord(word)) {
-        throw "Invalid Players File";
+        throw std::runtime_error("Invalid Players File");
     }
     if(!iss.eof()){
-        throw "Invalid Players File";
+        throw std::runtime_error("Invalid Players File");
     }
 }
 
@@ -165,11 +165,11 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     /*==========================================*/
     std::ifstream deckFile (deckPath);
     if(!deckFile.is_open()){
-        throw "Invalid Cards File";
+        throw std::runtime_error("Invalid Players File");
     }
     //deckFile.exceptions(std::ios::badbit | std::ios::eofbit | std::ios::failbit);
     readAndInitializeCards(deckFile, m_cards);
-
+    deckFile.close();
 
 
     /*===== TODO: Open and Read players file =====*/
@@ -177,9 +177,10 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     /*============================================*/
     std::ifstream  playerFile(playersPath);
     if(!playerFile.is_open()){
-        return; //error
+        throw std::runtime_error("Invalid Players File");
     }
     readAndInitializePlayer(playerFile, m_players);
+    playerFile.close();
 
 
 
@@ -237,7 +238,8 @@ bool Mtmchkin::isGameOver() const {
             knockedOut++;
         }
     }
-    if(knockedOut == m_players.size()){
+    int plyaerSize = m_players.size();
+    if(knockedOut == plyaerSize){
         return true;
     }
     return false; // Replace this line
@@ -248,7 +250,7 @@ bool Mtmchkin::isGameOver() const {
 
 void Mtmchkin::printRankPlayers()const{
     std::vector<std::shared_ptr<Player>> tmp_player = m_players;
-    std::sort(tmp_player.begin(), tmp_player.end(), [](auto const& player1, auto const& player2){
+    std::sort(tmp_player.begin(), tmp_player.end(), [](std::shared_ptr<Player> const& player1, std::shared_ptr<Player> const& player2){
         if(player1->getLevel() != player2->getLevel())
             return player1->getLevel() > player2->getLevel();
         if(player1->getCoins() != player2->getCoins())
@@ -286,20 +288,21 @@ void Mtmchkin::play() {
     int knockedOut = 0;
     for(const auto & playerPtr : m_players){
         if(playerPtr->getLevel() == MAX_LEVEL) {
-            printWinner(*getRnkedPlayer());
+            printWinner(*getRankedPlayer());
             break;
         }
         if(playerPtr->getHealthPoints() == 0) {
             knockedOut++;
         }
     }
-    if(knockedOut == m_players.size()){
+    int playerSize = m_players.size();
+    if(knockedOut == playerSize){
         printNoWinners();
     }
 }
-std::shared_ptr<Player> Mtmchkin::getRnkedPlayer() {
+std::shared_ptr<Player> Mtmchkin::getRankedPlayer() {
     std::vector<std::shared_ptr<Player>> tmp_player = m_players;
-    std::sort(tmp_player.begin(), tmp_player.end(), [](auto const& player1, auto const& player2){
+    std::sort(tmp_player.begin(), tmp_player.end(), [](std::shared_ptr<Player> const& player1, std::shared_ptr<Player> const& player2){
         if(player1->getLevel() != player2->getLevel())
             return player1->getLevel() > player2->getLevel();
         if(player1->getCoins() != player2->getCoins())

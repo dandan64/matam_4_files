@@ -67,7 +67,7 @@ public:
 
     //rank players to print later
     void printRankPlayers()const;
-    std::shared_ptr<Player> getRnkedPlayer();
+    std::shared_ptr<Player> getRankedPlayer();
 
 };
 
