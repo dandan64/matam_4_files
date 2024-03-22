@@ -222,7 +222,7 @@ void Mtmchkin::playRound() {
     /*===== TODO: Print leaderboard entry for each player using "printLeaderBoardEntry" =====*/
 
     /*=======================================================================================*/
-
+    printRankPlayers();
     printBarrier();
 }
 
@@ -246,7 +246,7 @@ bool Mtmchkin::isGameOver() const {
 
 
 
-void Mtmchkin::rankPlayers()const{
+void Mtmchkin::printRankPlayers()const{
     std::vector<std::shared_ptr<Player>> tmp_player = m_players;
     std::sort(tmp_player.begin(), tmp_player.end(), [](auto const& player1, auto const& player2){
         if(player1->getLevel() != player2->getLevel())
@@ -286,7 +286,7 @@ void Mtmchkin::play() {
     int knockedOut = 0;
     for(const auto & playerPtr : m_players){
         if(playerPtr->getLevel() == MAX_LEVEL) {
-            printWinner(*playerPtr);
+            printWinner(*getRnkedPlayer());
             break;
         }
         if(playerPtr->getHealthPoints() == 0) {
@@ -296,4 +296,15 @@ void Mtmchkin::play() {
     if(knockedOut == m_players.size()){
         printNoWinners();
     }
+}
+std::shared_ptr<Player> Mtmchkin::getRnkedPlayer() {
+    std::vector<std::shared_ptr<Player>> tmp_player = m_players;
+    std::sort(tmp_player.begin(), tmp_player.end(), [](auto const& player1, auto const& player2){
+        if(player1->getLevel() != player2->getLevel())
+            return player1->getLevel() > player2->getLevel();
+        if(player1->getCoins() != player2->getCoins())
+            return player1->getCoins() > player2->getCoins();
+        return player1->getName() < player2->getName();
+    });
+    return tmp_player[0];
 }
