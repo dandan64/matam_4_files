@@ -5,15 +5,15 @@
 Gang::Gang(int CombatPower, int Loot, int Damage, int gangSize) :
     m_CombatPower(CombatPower), m_Loot(Loot), m_Damage(Damage), m_gangSize(gangSize){}
 
-void Gang::applyEncounter(Player& player) const{
+string Gang::applyEncounter(Player& player) const{
     if(m_CombatPower < player.getForce()){
         player.levelUp();
         player.addCoins(m_Loot);
-        printTurnOutcome(getEncounterWonMessage(player, m_Loot));
+        return getEncounterWonMessage(player, m_Loot);
     }
     else{
         player.reduceHealthPoints(m_Damage);
-        printTurnOutcome(getEncounterLostMessage(player, m_Damage));
+        return getEncounterLostMessage(player, m_Damage);
     }
 }
 

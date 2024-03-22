@@ -21,7 +21,7 @@ public:
     virtual int getLoot() const override;
     virtual int getDamage() const override;
     virtual string getDescription() const override;
-    virtual void applyEncounter(Player& player) const;
+    virtual string applyEncounter(Player& player) const;
 
 };
 

@@ -6,8 +6,8 @@
 #include "Player.h"
 
 
-void SolarEclipse::applyEncounter(Player& player) const{
-    player.playSolarEclipse();
+string SolarEclipse::applyEncounter(Player& player) const{
+    return player.playSolarEclipse();
 }
 string  SolarEclipse::getDescription() const{
     return "SolarEclipse";

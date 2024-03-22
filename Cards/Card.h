@@ -21,7 +21,7 @@ public:
     */
 
     virtual string getDescription() const = 0;
-    virtual void applyEncounter(Player& player) const = 0;
+    virtual string applyEncounter(Player& player) const = 0;
 };
 
 

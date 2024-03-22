@@ -19,7 +19,7 @@ public:
     Dragon(Dragon& dragon) = default;
     ~Dragon() = default;
 
-    virtual void applyEncounter(Player& player) const override;
+    virtual string applyEncounter(Player& player) const override;
     virtual int getCombatPower() const;
     virtual int getLoot() const;
     virtual int getDamage() const;

@@ -9,7 +9,7 @@
 class SolarEclipse : public Event{
 public:
     SolarEclipse() = default;
-    void applyEncounter(Player& player) const override;
+    string applyEncounter(Player& player) const override;
     string  getDescription() const override;
 
 };

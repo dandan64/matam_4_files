@@ -15,7 +15,7 @@ public:
     Goblin() = default;
     Goblin(Goblin& goblin) = default;
     ~Goblin() = default;
-    virtual void applyEncounter(Player& player) const override;
+    virtual string applyEncounter(Player& player) const override;
     virtual int getCombatPower() const;
     virtual int getLoot() const;
     virtual int getDamage() const;

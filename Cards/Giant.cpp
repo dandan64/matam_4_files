@@ -2,15 +2,15 @@
 #include "Player.h"
 #include "utilities.h"
 
-void Giant::applyEncounter(Player& player) const {
+string Giant::applyEncounter(Player& player) const {
     if(m_CombatPower < player.getForce()){
         player.levelUp();
         player.addCoins(m_Loot);
-        printTurnOutcome(getEncounterWonMessage(player, m_Loot));
+        return getEncounterWonMessage(player, m_Loot);
     }
     else{
         player.reduceHealthPoints(m_Damage);
-        printTurnOutcome(getEncounterLostMessage(player, m_Damage));
+        return getEncounterLostMessage(player, m_Damage);
     }
 }
 

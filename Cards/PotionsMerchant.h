@@ -9,7 +9,7 @@
 class PotionsMerchant : public Event{
 public:
     PotionsMerchant() = default;
-    void applyEncounter(Player& player) const override;
+    string applyEncounter(Player& player) const override;
     string  getDescription() const override;
 };
 
