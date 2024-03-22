@@ -86,3 +86,9 @@ string Player::getDescription() const{
 void Player::levelUp(){
     m_level++;
 }
+
+bool Player::isKnockedOut(){
+    if(m_hp==0)
+        return true;
+    return false;
+}

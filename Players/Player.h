@@ -97,5 +97,7 @@ public:
     void playSolarEclipse();
 
     void levelUp();
+
+    bool isKnockedOut();
    
 };
