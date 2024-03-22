@@ -178,6 +178,7 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     readAndInitializePlayer(playerFile, m_players);
 
 
+
     this->m_turnIndex = 1;
 }
 
@@ -193,12 +194,10 @@ void Mtmchkin::playTurn(Player& player) {
     int cardToPlay = m_turnIndex % m_cards.size();
     printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay]);
 
-
     m_turnIndex++;
 }
 
 void Mtmchkin::playRound() {
-
     printRoundStart();
 
     /*===== TODO: Play a turn for each player =====*/
@@ -229,6 +228,11 @@ void Mtmchkin::play() {
     /*===== TODO: Print start message entry for each player using "printStartPlayerEntry" =====*/
 
     /*=========================================================================================*/
+    int index = 0;
+    for(const auto& playerPtr: m_players){
+        const Player& player = *playerPtr;
+        printStartPlayerEntry(index++, player);
+    }
     printBarrier();
 
     while (!isGameOver()) {
