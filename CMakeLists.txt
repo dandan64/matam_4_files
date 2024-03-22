@@ -37,4 +37,6 @@ add_executable(ex4_supplied1
         Players/Responsible.cpp
         Players/RiskTaking.cpp
         Players/Warrior.cpp
-        Players/Socreer.cpp)
+        Players/Socreer.cpp
+        Cards/PotionsMerchant.cpp
+        Cards/PotionsMerchant.h)

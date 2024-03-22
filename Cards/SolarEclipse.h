@@ -8,9 +8,12 @@
 
 class SolarEclipse : public Event{
 public:
-    SolarEclipse();
-    virtual void applyEncounter(Player& player) const;
+    SolarEclipse() = default;
+    void applyEncounter(Player& player) const override;
+    string  getDescription() const override;
+
 };
+
 
 
 #endif //EX4_SUPPLIED1_SOLARECLIPSE_H
