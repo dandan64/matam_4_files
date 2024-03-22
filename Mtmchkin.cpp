@@ -1,6 +1,7 @@
 
 #include "Mtmchkin.h"
 #include <fstream>
+#include<algorithm>
 #include "utilities.h"
 #include <cctype>
 #include <sstream>
@@ -228,6 +229,13 @@ bool Mtmchkin::isGameOver() const {
     /*===== TODO: Implement the game over condition =====*/
     return false; // Replace this line
     /*===================================================*/
+}
+
+void Mtmchkin::rankPlayers()const{
+    std::vector<std::unique_ptr<Player>> tmp_player = m_players;
+    for(const auto& player : tmp_player){
+        std::sort(tmp_player.begin(), tmp_player.end(), func);
+    }
 }
 
 void Mtmchkin::play() {
