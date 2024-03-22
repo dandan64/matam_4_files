@@ -55,12 +55,12 @@ bool Player::buyPotion(){ //should I do it with true/false?
     return true;
 }
 
-void Player::playPotionsMerchant(){
-    m_behavior->makePotionsMerchant(*this);
+string Player::playPotionsMerchant(){
+   return(m_behavior->makePotionsMerchant(*this));
 }
 
-void Player::playSolarEclipse(){
-    m_job->makeSolarEclipse(*this);
+string Player::playSolarEclipse(){
+    return(m_job->makeSolarEclipse(*this));
 }
 
 void Player::addCoins(int amount){ //will it be different for each player?

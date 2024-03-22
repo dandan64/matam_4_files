@@ -90,11 +90,11 @@ public:
 
     //playing the card of the event PotionsMerchant
     //different implamentaion for each Job
-    void playPotionsMerchant();
+    string playPotionsMerchant();
     
     //playing the card of the event Solar Eclipse adds a point to a soccreer
     //loses a point to any other job
-    void playSolarEclipse();
+    string playSolarEclipse();
 
     void levelUp();
 
