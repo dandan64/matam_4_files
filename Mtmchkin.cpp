@@ -195,7 +195,7 @@ void Mtmchkin::playTurn(Player& player) {
     */
     int cardToPlay = m_turnIndex % m_cards.size();
     printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay]);
-    m_cards[cardToPlay]->applyEncounter(player);
+    printTurnOutcome(m_cards[cardToPlay]->applyEncounter(player));
 
 
     m_turnIndex++;
