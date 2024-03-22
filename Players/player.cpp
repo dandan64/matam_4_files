@@ -68,9 +68,9 @@ void Player::addCoins(int amount){ //will it be different for each player?
 }
 
 void Player::reduceHealthPoints(int amount){
-    m_coins-=amount;
-    if(m_coins<0)
-        m_coins = 0;
+    m_hp -= amount;
+    if(m_hp < 0)
+        m_hp = 0;
 }
 
 string Player::getDescription() const{
