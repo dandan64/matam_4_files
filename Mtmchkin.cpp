@@ -193,7 +193,7 @@ void Mtmchkin::playTurn(Player& player) {
     */
     int cardToPlay = m_turnIndex % m_cards.size();
     printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay]);
-
+    m_cards[cardToPlay]->applyEncounter(player);
     m_turnIndex++;
 }
 
@@ -203,8 +203,14 @@ void Mtmchkin::playRound() {
     /*===== TODO: Play a turn for each player =====*/
 
     /*=============================================*/
-    int playerToPlay = m_turnIndex % m_players.size();
-    playTurn(*m_players[playerToPlay]);
+    //int playerToPlay = m_turnIndex % m_players.size();
+    for(const auto & playerToPlay : m_players){
+        //if(player not nocked out)
+            playTurn(*playerToPlay);
+    }
+
+
+    //playTurn(*m_players[playerToPlay]);
 
     printRoundEnd();
 
