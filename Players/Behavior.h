@@ -9,7 +9,7 @@ static const int MIN_HP_TO_BUY_POTION_RISKTAKING = 50;
 
 class Behavior {
     public:
-    virtual void makePotionsMerchant(Player& player) = 0;
+    virtual string  makePotionsMerchant(Player& player) = 0;
     virtual string getBehavior() = 0;
     virtual ~Behavior()= default;
 };
