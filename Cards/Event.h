@@ -2,7 +2,7 @@
 #ifndef EX4_SUPPLIED1_EVENT_H
 #define EX4_SUPPLIED1_EVENT_H
 #include "Card.h"
-#include "Player.h"
+#include "Players/Player.h"
 
 
 class Event : public Card{
