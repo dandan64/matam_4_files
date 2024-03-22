@@ -20,6 +20,7 @@
 #include "Players/RiskTaking.h"
 #include "Players/Responsible.h"
 #include "Players/SelectTypes.h"
+static int MAX_LEVEL = 10;
 
 
 
@@ -227,6 +228,18 @@ void Mtmchkin::playRound() {
 
 bool Mtmchkin::isGameOver() const {
     /*===== TODO: Implement the game over condition =====*/
+    int knockedOut = 0;
+    for(const auto& playerPtr : m_players){
+        if(playerPtr->getLevel() == MAX_LEVEL){
+            return true;
+        }
+        if(playerPtr->getHealthPoints() == 0){
+            knockedOut++;
+        }
+    }
+    if(knockedOut == m_players.size()){
+        return true;
+    }
     return false; // Replace this line
     /*===================================================*/
 }
