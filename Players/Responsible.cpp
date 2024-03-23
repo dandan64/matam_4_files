@@ -7,12 +7,9 @@ using std::cout;
 //responsible buys untill hp 100 or out of money to buy
 string Responsible :: makePotionsMerchant(Player& player) { // a different cpp
         int amount = 0;
-        bool canBuy = player.buyPotion();
-        if(canBuy)
+        while(player.getHealthPoints() < MAX_HP && player.getCoins() >= PRICE_POTION){
+            player.buyPotion();
             amount++;
-        while(canBuy && player.getHealthPoints() < MAX_HP){
-            amount++;
-            canBuy = player.buyPotion();
         }
         return getPotionsPurchaseMessage(player, amount);
         
