@@ -176,7 +176,7 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     /*==========================================*/
     std::ifstream deckFile (deckPath);
     if(!deckFile.is_open()){
-        throw std::runtime_error("Invalid Players File");
+        throw std::runtime_error("Invalid Cards File");
     }
     //deckFile.exceptions(std::ios::badbit | std::ios::eofbit | std::ios::failbit);
     readAndInitializeCards(deckFile, m_cards);
