@@ -1,5 +1,5 @@
 #include "Dragon.h"
-#include "Player/Player.h"
+#include "Players/Player.h"
 #include "utilities.h"
 string Dragon::applyEncounter(Player& player) const {
     if(m_CombatPower < player.getCombatPower()){

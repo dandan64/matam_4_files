@@ -3,7 +3,7 @@
 //
 #include "Event.h"
 #include "SolarEclipse.h"
-#include "Player/Player.h"
+#include "Players/Player.h"
 
 
 string SolarEclipse::applyEncounter(Player& player) const{

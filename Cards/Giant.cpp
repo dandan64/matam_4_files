@@ -1,5 +1,5 @@
 #include "Giant.h"
-#include "Player/Player.h"
+#include "Players/Player.h"
 #include "utilities.h"
 
 string Giant::applyEncounter(Player& player) const {
