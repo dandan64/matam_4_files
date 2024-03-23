@@ -4,7 +4,7 @@
 
 
 string Goblin::applyEncounter(Player& player) const {
-    if(m_CombatPower < player.getForce()){
+    if(m_CombatPower < player.getCombatPower()){
         player.levelUp();
         player.addCoins(m_Loot);
         return getEncounterWonMessage(player, m_Loot);
@@ -26,5 +26,5 @@ int Goblin::getDamage() const{
 }
 
 string Goblin::getDescription() const{
-    return "Goblin (power 5, loot 2, damage 10";
+    return "Goblin (power 5, loot 2, damage 10)";
 }

@@ -23,6 +23,7 @@ for i in fileTests/inFiles/test*.in; do
 
     # Run the game simulation and output results to a file
     set -v
+    echo ./FileTester "fileTests/inFiles/test${testNumber}.deck" "$i" "fileTests/outFiles/test${testNumber}.result"
     ./FileTester "fileTests/inFiles/test${testNumber}.deck" "$i" "fileTests/outFiles/test${testNumber}.result"
     unset -v
 

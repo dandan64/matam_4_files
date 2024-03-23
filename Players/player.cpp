@@ -75,9 +75,9 @@ void Player::reduceHealthPoints(int amount){
 
 string Player::getDescription() const{
     std::ostringstream description;
-    description << m_name << ",";
+    description << m_name << ", ";
     description << m_job->getJob() << " with ";
-    description << m_behavior->getBehavior() << " behavior";
+    description << m_behavior->getBehavior() << " behavior ";
     description << "(level " << m_level;
     description << ", force " << m_force << ")";
     return description.str();
@@ -91,4 +91,11 @@ bool Player::isKnockedOut(){
     if(m_hp==0)
         return true;
     return false;
+}
+
+int Player::getCombatPower() const{
+    if(m_job->getJob() == "Warrior"){
+        return 2*m_force + m_level;
+    }
+    return m_force;
 }

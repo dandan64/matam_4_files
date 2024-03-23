@@ -3,7 +3,7 @@
 #include "utilities.h"
 
 string Giant::applyEncounter(Player& player) const {
-    if(m_CombatPower < player.getForce()){
+    if(m_CombatPower < player.getCombatPower()){
         player.levelUp();
         player.addCoins(m_Loot);
         return getEncounterWonMessage(player, m_Loot);
@@ -25,5 +25,5 @@ int Giant::getDamage() const{
 }
 
 string Giant::getDescription() const{
-    return "Giant (power 12, loot 5, damage 25";
+    return "Giant (power 12, loot 5, damage 25)";
 }

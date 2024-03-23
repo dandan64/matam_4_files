@@ -99,5 +99,7 @@ public:
     void levelUp();
 
     bool isKnockedOut();
+
+    int getCombatPower() const;
    
 };

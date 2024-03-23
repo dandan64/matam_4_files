@@ -30,7 +30,7 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
     int num = 0;
     deckFile>>num;
     if(deckFile.bad() || deckFile.fail() || num < 2){
-        throw std::runtime_error("Invalid Players File");
+        throw std::runtime_error("Invalid Cards File");
     }
     for(int i = 0; i < num; ++i){
         InitializeCard(deckFile, tmpCards);
@@ -82,7 +82,7 @@ void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
      InitializePotionsMerchant(m_cards);
     }
     else{
-        throw std::runtime_error("Invalid Players File");
+        throw std::runtime_error("Invalid Cards File");
     }
 }
 
@@ -101,7 +101,7 @@ bool checkFirstWord(const std::string& name){
             return isValid;
         }
     }
-    if(name.length() <=3 || name.length() >= 15){
+    if(name.length() < 3 || name.length() > 15){
         isValid = false;
     }
     return isValid;
@@ -138,6 +138,7 @@ void checkIfLineLegal(const std::string& line){
     if (!checkThirdWord(word)) {
         throw std::runtime_error("Invalid Players File");
     }
+    iss>>word;
     if(!iss.eof()){
         throw std::runtime_error("Invalid Players File");
     }
@@ -197,8 +198,8 @@ void Mtmchkin::playTurn(Player& player) {
      * 4. Print the turn outcome with "printTurnOutcome"
     */
     int cardToPlay = m_turnIndex % m_cards.size();
-    printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay]);
-    printTurnOutcome(m_cards[cardToPlay]->applyEncounter(player));
+    printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay - 1]);
+    printTurnOutcome(m_cards[cardToPlay - 1]->applyEncounter(player));
 
 
     m_turnIndex++;
@@ -257,7 +258,7 @@ void Mtmchkin::printRankPlayers()const{
             return player1->getCoins() > player2->getCoins();
         return player1->getName() < player2->getName();
     });
-    int index = 0;
+    int index = 1;
     for(const auto & player_ptr : tmp_player){
         printLeaderBoardEntry(index++, *player_ptr);
     }
@@ -270,7 +271,7 @@ void Mtmchkin::play() {
     /*===== TODO: Print start message entry for each player using "printStartPlayerEntry" =====*/
 
     /*=========================================================================================*/
-    int index = 0;
+    int index = 1;
     for(const auto& playerPtr: m_players){
         const Player& player = *playerPtr;
         printStartPlayerEntry(index++, player);

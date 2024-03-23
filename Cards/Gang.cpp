@@ -6,7 +6,7 @@ Gang::Gang(int CombatPower, int Loot, int Damage, int gangSize) :
     m_CombatPower(CombatPower), m_Loot(Loot), m_Damage(Damage), m_gangSize(gangSize){}
 
 string Gang::applyEncounter(Player& player) const{
-    if(m_CombatPower < player.getForce()){
+    if(m_CombatPower < player.getCombatPower()){
         player.levelUp();
         player.addCoins(m_Loot);
         return getEncounterWonMessage(player, m_Loot);
