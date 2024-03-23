@@ -44,15 +44,11 @@ void Player::losePointForce(){
     m_force--;
 }
 
-bool Player::buyPotion(){ //should I do it with true/false?
-    if(m_coins < PRICE_POTION){
-        return false;
-    }
+void Player::buyPotion(){ //should I do it with true/false?
     m_coins -= PRICE_POTION;
     m_hp += HEALTH_ADDITION;
     if(m_hp > MAX_HP)
         m_hp = MAX_HP;
-    return true;
 }
 
 string Player::playPotionsMerchant(){

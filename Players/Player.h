@@ -80,7 +80,7 @@ public:
     void losePointForce();
 
     //buys a potion accordine to the player's behavior
-    bool buyPotion();
+    void buyPotion();
 
     //gets the amount of coins according the amount it
     void addCoins(int amount);
