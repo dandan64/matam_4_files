@@ -198,8 +198,15 @@ void Mtmchkin::playTurn(Player& player) {
      * 4. Print the turn outcome with "printTurnOutcome"
     */
     int cardToPlay = m_turnIndex % m_cards.size();
-    printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay - 1]);
-    printTurnOutcome(m_cards[cardToPlay - 1]->applyEncounter(player));
+    if (cardToPlay == 0){
+        printTurnDetails(m_turnIndex, player ,*m_cards[m_cards.size()-1]);
+        printTurnOutcome(m_cards[m_cards.size()-1]->applyEncounter(player));
+    }
+    else{
+        printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay - 1]);
+        printTurnOutcome(m_cards[cardToPlay - 1]->applyEncounter(player));
+    }
+
 
 
     m_turnIndex++;

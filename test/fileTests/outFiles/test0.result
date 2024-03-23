@@ -135,3 +135,18 @@ New round starts!
 
 Turn: 10
 Player: Ron, Warrior with RiskTaking behavior (level 9, force 5)
+Card: Dragon (power 17, loot 100, damage 9001)
+Ron won the encounter, gained 100 coins and leveled up!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Ron             10        5     100   129
+2          Adi             1         5     0     10
+
+----------------------------------------
+
+Game is over!
+The winner is: Ron
+Congratulations!
+
