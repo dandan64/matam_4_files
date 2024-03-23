@@ -199,7 +199,7 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     }
     readAndInitializePlayer(playerFile, m_players);
     playerFile.close();
-    int players = m_cards.size();
+    int players = m_players.size();
     if(players < 2 || players > 6){
         throw std::runtime_error("Invalid Players File");
     }
