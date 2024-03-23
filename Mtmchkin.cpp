@@ -37,10 +37,14 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
     }
     int combatPower = 0 , loot = 0, damage = 0;
     for(std::unique_ptr<Card>& i : tmpCards){
-        const Encounter& encounter = dynamic_cast<Encounter&>(*i);
-        combatPower += encounter.getCombatPower();
-        loot += encounter.getLoot();
-        damage += encounter.getDamage();
+        try {
+            const Encounter &encounter = dynamic_cast<Encounter &>(*i);
+            combatPower += encounter.getCombatPower();
+            loot += encounter.getLoot();
+            damage += encounter.getDamage();
+        } catch (const std::bad_cast& e){
+            throw (std::runtime_error ("Invalid Cards File"));
+        }
     }
     m_cards.emplace_back(new Gang(combatPower,loot, damage, num));
 }
