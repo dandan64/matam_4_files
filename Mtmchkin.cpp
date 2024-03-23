@@ -184,6 +184,10 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     //deckFile.exceptions(std::ios::badbit | std::ios::eofbit | std::ios::failbit);
     readAndInitializeCards(deckFile, m_cards);
     deckFile.close();
+    int cardSize = m_cards.size();
+    if(cardSize < 2){
+        throw std::runtime_error("Invalid Cards File");
+    }
 
 
     /*===== TODO: Open and Read players file =====*/
@@ -195,7 +199,10 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     }
     readAndInitializePlayer(playerFile, m_players);
     playerFile.close();
-
+    int players = m_cards.size();
+    if(players < 2 || players > 6){
+        throw std::runtime_error("Invalid Players File");
+    }
 
 
     this->m_turnIndex = 1;
