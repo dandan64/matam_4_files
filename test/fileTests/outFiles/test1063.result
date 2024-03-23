@@ -1,1 +1,111 @@
-Invalid Cards File
+Game is about to start!
+These are the players:
+
+1. nNmIQOfluhnXWfI, Sorcerer with Responsible behavior (level 1, force 5)
+2. myp, Warrior with RiskTaking behavior (level 1, force 5)
+
+----------------------------------------
+
+New round starts!
+
+Turn: 1
+Player: nNmIQOfluhnXWfI, Sorcerer with Responsible behavior (level 1, force 5)
+Card: PotionsMerchant
+nNmIQOfluhnXWfI bought 0 potions!
+
+Turn: 2
+Player: myp, Warrior with RiskTaking behavior (level 1, force 5)
+Card: SolarEclipse
+myp was affected by a solar eclipse! their force has changed by -1!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          myp             1         4     100   10
+2          nNmIQOfluhnXWfI 1         5     100   10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 3
+Player: nNmIQOfluhnXWfI, Sorcerer with Responsible behavior (level 1, force 5)
+Card: SolarEclipse
+nNmIQOfluhnXWfI was affected by a solar eclipse! their force has changed by 1!
+
+Turn: 4
+Player: myp, Warrior with RiskTaking behavior (level 1, force 4)
+Card: PotionsMerchant
+myp bought 0 potions!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          myp             1         4     100   10
+2          nNmIQOfluhnXWfI 1         6     100   10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 5
+Player: nNmIQOfluhnXWfI, Sorcerer with Responsible behavior (level 1, force 6)
+Card: PotionsMerchant
+nNmIQOfluhnXWfI bought 0 potions!
+
+Turn: 6
+Player: myp, Warrior with RiskTaking behavior (level 1, force 4)
+Card: SolarEclipse
+myp was affected by a solar eclipse! their force has changed by -1!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          myp             1         3     100   10
+2          nNmIQOfluhnXWfI 1         6     100   10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 7
+Player: nNmIQOfluhnXWfI, Sorcerer with Responsible behavior (level 1, force 6)
+Card: Gang of 3 members (power 22, loot 9, damage 45)
+nNmIQOfluhnXWfI lost the encounter and took 45 damage!
+
+Turn: 8
+Player: myp, Warrior with RiskTaking behavior (level 1, force 3)
+Card: Gang of 6 members (power 44, loot 18, damage 90)
+myp lost the encounter and took 90 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          myp             1         3     10    10
+2          nNmIQOfluhnXWfI 1         6     55    10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 9
+Player: nNmIQOfluhnXWfI, Sorcerer with Responsible behavior (level 1, force 6)
+Card: Gang of 6 members (power 58, loot 24, damage 120)
+nNmIQOfluhnXWfI lost the encounter and took 120 damage!
+
+Turn: 10
+Player: myp, Warrior with RiskTaking behavior (level 1, force 3)
+Card: Gang of 5 members (power 200, loot 82, damage 410)
+myp lost the encounter and took 410 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          myp             1         3     0     10
+2          nNmIQOfluhnXWfI 1         6     0     10
+
+----------------------------------------
+
+Game is over!
+There are no winners in this game.
+Better luck next time!

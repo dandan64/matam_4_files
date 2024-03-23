@@ -20,6 +20,9 @@
 #include "Players/RiskTaking.h"
 #include "Players/Responsible.h"
 #include "Players/SelectTypes.h"
+#include "Players/Player.h"
+#include "Players/SelectTypes.h"
+#include "Cards/Encounter.h"
 static int MAX_LEVEL = 10;
 
 
