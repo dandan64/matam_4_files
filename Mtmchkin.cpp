@@ -38,6 +38,9 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
     for(int i = 0; i < num; ++i){
         InitializeCard(deckFile, tmpCards);
     }
+    if(int(tmpCards.size()) != num){
+        throw std::runtime_error("Invalid Cards File");
+    }
     int combatPower = 0 , loot = 0, damage = 0;
     for(std::unique_ptr<Card>& i : tmpCards){
         try {
