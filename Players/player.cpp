@@ -93,5 +93,5 @@ int Player::getCombatPower() const{
     if(m_job->getJob() == "Warrior"){
         return 2*m_force + m_level;
     }
-    return m_force;
+    return m_level + m_force;
 }

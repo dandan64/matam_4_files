@@ -67,6 +67,9 @@ void InitializePotionsMerchant(vector<std::unique_ptr<Card>>& m_cards){
 void InitializeCard(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_cards){
     std::string word;
     deckFile >> word;
+    if(word == ""){
+        return;
+    }
     if(word == "Gang"){
      InitializeGang(deckFile, m_cards);
     }
