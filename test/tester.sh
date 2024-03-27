@@ -41,7 +41,11 @@ for ((testNumber=0; testNumber<=TESTS_TO_RUN; testNumber++)); do
     echo "Running test $testNumber >>>"
 
     # Run the game simulation and output results to a file
+<<<<<<< HEAD
     ./FileTester "$deckFile" "$inFile" "$resultFile"
+=======
+    ./FileTester "fileTests/inFiles/test${testNumber}.deck" "$i" "fileTests/outFiles/test${testNumber}.result"
+>>>>>>> 5628fd478c7856a086ffec53b095ecd3ea13d00c
 
     # Compare the generated result with the expected result
     if diff "$expectedFile" "$resultFile" > /dev/null; then
@@ -96,6 +100,7 @@ if [ $FAILED_TESTS -eq 0 ]; then
             ┗┻┛┗┻┛┗┻┛•┗┻┛┗┛┛┗┗┛┻•┻┗┛
 ${NC}"
 else
+<<<<<<< HEAD
     echo -e "${RED}
      XXXXXXXXY          XXXXXXX
         XXXXX            XXXXX
@@ -113,6 +118,8 @@ else
                                                                                                                         XXX         X
                                                                                                                           XXXXXXXXX
     "
+=======
+>>>>>>> 5628fd478c7856a086ffec53b095ecd3ea13d00c
     echo -e "\n${RED}Failed $FAILED_TESTS tests.${NC}"
     echo -e "Failed tests: \n${PURPLE}${FAILED_TEST_NUMBERS}${NC}\n"
     echo "To see the differences for a failed test, use the diff.sh script. For example:"
