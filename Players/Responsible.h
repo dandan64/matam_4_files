@@ -3,11 +3,16 @@
 
 #include "Behavior.h"
 
-class Responsible :public Behavior{ //how to save the kind of behavior?
-//who will release the data?
+class Responsible :public Behavior{ 
+
     public:
     Responsible() = default;
-    virtual string makePotionsMerchant(Player& player) override;
+
+    //@return a string describing how many potions the character got
+    //@param gets a player makes the move
+    virtual string  makePotionsMerchant(Player& player) override;
+
+    //@return string of the specific behavior 
     virtual string getBehavior() override;
 };
 

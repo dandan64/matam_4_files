@@ -17,11 +17,34 @@ public:
     Gang(int CombatPower, int Loot, int Damage, int gangSize);
     Gang(Gang& gang) = default;
     ~Gang() = default;
+
+
+     /**
+     * @param /gets a player makes the move
+     *  
+     * @return - returns outcome of the turn
+    */
+    virtual string applyEncounter(Player& player) const override;
+
+
+    //@return the combat power 
     virtual int getCombatPower() const override;
+
+
+    //@return the loot
     virtual int getLoot() const override;
+
+
+    //@return damage
     virtual int getDamage() const override;
+
+    
+    /**
+     * Gets the description of the card
+     *
+     * @return - the description of the card
+    */
     virtual string getDescription() const override;
-    virtual string applyEncounter(Player& player) const;
 
 };
 

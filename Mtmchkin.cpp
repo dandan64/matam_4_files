@@ -173,15 +173,12 @@ void readAndInitializePlayer(std::istream& playerFile, vector<std::shared_ptr<Pl
 }
 
 Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
-
-    /*===== TODO: Open and read cards file =====*/
-
-    /*==========================================*/
+    
     std::ifstream deckFile (deckPath);
     if(!deckFile.is_open()){
         throw std::runtime_error("Invalid Cards File");
     }
-    //deckFile.exceptions(std::ios::badbit | std::ios::eofbit | std::ios::failbit);
+
     readAndInitializeCards(deckFile, m_cards);
     deckFile.close();
     int cardSize = m_cards.size();
@@ -189,10 +186,6 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
         throw std::runtime_error("Invalid Cards File");
     }
 
-
-    /*===== TODO: Open and Read players file =====*/
-
-    /*============================================*/
     std::ifstream  playerFile(playersPath);
     if(!playerFile.is_open()){
         throw std::runtime_error("Invalid Players File");
@@ -209,19 +202,9 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
 }
 
 void Mtmchkin::playTurn(Player& player) {
-
-    /**
-     * Steps to implement (there may be more, depending on your design):
-     * 1. Draw a card from the deck
-     * 2. Print the turn details with "printTurnDetails"
-     * 3. Play the card
-     * 4. Print the turn outcome with "printTurnOutcome"
-    */
     int cardToPlay = (m_turnIndex - 1) % m_cards.size();
     printTurnDetails(m_turnIndex, player ,*m_cards[cardToPlay]);
     printTurnOutcome(m_cards[cardToPlay]->applyEncounter(player));
-
-
 
     m_turnIndex++;
 }
@@ -229,9 +212,6 @@ void Mtmchkin::playTurn(Player& player) {
 void Mtmchkin::playRound() {
     printRoundStart();
 
-    /*===== TODO: Play a turn for each player =====*/
-
-    /*=============================================*/
     for(const auto & playerToPlay : m_players){
         if(!playerToPlay->isKnockedOut()) {
             playTurn(*playerToPlay);
@@ -242,15 +222,12 @@ void Mtmchkin::playRound() {
 
     printLeaderBoardMessage();
 
-    /*===== TODO: Print leaderboard entry for each player using "printLeaderBoardEntry" =====*/
-
-    /*=======================================================================================*/
     printRankPlayers();
     printBarrier();
 }
 
 bool Mtmchkin::isGameOver() const {
-    /*===== TODO: Implement the game over condition =====*/
+   
     int knockedOut = 0;
     for(const auto& playerPtr : m_players){
         if(playerPtr->getLevel() == MAX_LEVEL){
@@ -264,8 +241,7 @@ bool Mtmchkin::isGameOver() const {
     if(knockedOut == plyaerSize){
         return true;
     }
-    return false; // Replace this line
-    /*===================================================*/
+    return false;
 }
 
 
@@ -289,24 +265,18 @@ void Mtmchkin::printRankPlayers()const{
 
 void Mtmchkin::play() {
     printStartMessage();
-    /*===== TODO: Print start message entry for each player using "printStartPlayerEntry" =====*/
 
-    /*=========================================================================================*/
     int index = 1;
     for(const auto& playerPtr: m_players){
         const Player& player = *playerPtr;
         printStartPlayerEntry(index++, player);
     }
     printBarrier();
-
     while (!isGameOver()) {
         playRound();
     }
 
     printGameOver();
-    /*===== TODO: Print either a "winner" message or "no winner" message =====*/
-
-    /*========================================================================*/
     int knockedOut = 0;
     for(const auto & playerPtr : m_players){
         if(playerPtr->getLevel() == MAX_LEVEL) {
@@ -322,6 +292,8 @@ void Mtmchkin::play() {
         printNoWinners();
     }
 }
+
+
 std::shared_ptr<Player> Mtmchkin::getRankedPlayer() {
     std::vector<std::shared_ptr<Player>> tmp_player = m_players;
     std::sort(tmp_player.begin(), tmp_player.end(), [](std::shared_ptr<Player> const& player1, std::shared_ptr<Player> const& player2){

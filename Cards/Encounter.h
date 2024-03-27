@@ -10,11 +10,32 @@ class Encounter : public Card{
         Encounter(Encounter& encounter) = default;
         virtual ~Encounter() = default;
 
-        virtual string applyEncounter(Player& player) const = 0;
-        virtual string getDescription() const = 0;
-        virtual int getDamage() const = 0;
-        virtual int getLoot() const = 0;
-        virtual int getCombatPower () const = 0;
+         /**
+     * @param /gets a player makes the move
+     *  
+     * @return - returns outcome of the turn
+    */
+    virtual string applyEncounter(Player& player) const = 0;
+
+
+    //@return the combat power 
+    virtual int getCombatPower() const = 0;
+
+
+    //@return the loot
+    virtual int getLoot() const = 0;
+
+
+    //@return damage
+    virtual int getDamage() const = 0;
+
+    
+    /**
+     * Gets the description of the card
+     *
+     * @return - the description of the card
+    */
+    virtual string getDescription() const = 0;
 };
 
 

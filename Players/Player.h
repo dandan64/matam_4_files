@@ -96,10 +96,14 @@ public:
     //loses a point to any other job
     string playSolarEclipse();
 
+    //adds one to level
     void levelUp();
 
+
+    //checks if the player is out of hp
     bool isKnockedOut();
 
+    //calculating the player's power according to his job
     int getCombatPower() const;
    
 };

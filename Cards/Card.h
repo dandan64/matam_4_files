@@ -9,9 +9,9 @@ protected:
 
 
 public:
-    //Card(const std::string& type);
+    
     Card() = default;
-    Card(const Card& card) = delete;
+    Card(const Card& card) = delete; 
     virtual ~Card() = default;
 
     /**
@@ -19,8 +19,13 @@ public:
      *
      * @return - the description of the card
     */
-
     virtual string getDescription() const = 0;
+
+    /**
+     * @param /gets a player makes the move
+     *  
+     * @return - returns outcome of the turn
+    */
     virtual string applyEncounter(Player& player) const = 0;
 };
 

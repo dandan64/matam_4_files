@@ -9,7 +9,19 @@
 class PotionsMerchant : public Event{
 public:
     PotionsMerchant() = default;
+
+     /**
+     * @param /gets a player makes the move
+     *  
+     * @return - returns outcome of the turn
+    */
     string applyEncounter(Player& player) const override;
+
+    /**
+     * Gets the description of the card
+     *
+     * @return - the description of the card
+    */
     string  getDescription() const override;
 };
 

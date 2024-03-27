@@ -15,10 +15,31 @@ public:
     Goblin() = default;
     Goblin(Goblin& goblin) = default;
     ~Goblin() = default;
+     /**
+     * @param /gets a player makes the move
+     *  
+     * @return - returns outcome of the turn
+    */
     virtual string applyEncounter(Player& player) const override;
-    virtual int getCombatPower() const;
-    virtual int getLoot() const;
-    virtual int getDamage() const;
+
+
+    //@return the combat power 
+    virtual int getCombatPower() const override;
+
+
+    //@return the loot
+    virtual int getLoot() const override;
+
+
+    //@return damage
+    virtual int getDamage() const override;
+
+    
+    /**
+     * Gets the description of the card
+     *
+     * @return - the description of the card
+    */
     virtual string getDescription() const override;
 };
 

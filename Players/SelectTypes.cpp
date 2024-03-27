@@ -2,9 +2,9 @@
 #include "SelectTypes.h"
 
 
-unique_ptr<Behavior> selectBehavior(string behavior){ //put in a different file
+unique_ptr<Behavior> selectBehavior(string behavior){ 
     if(behavior == "Responsible"){
-        unique_ptr<Behavior> behaviorToReturn (new Responsible()); // unique ptr?
+        unique_ptr<Behavior> behaviorToReturn (new Responsible()); 
         return behaviorToReturn;
     }
     if(behavior == "RiskTaking"){

@@ -10,6 +10,7 @@ class Event : public Card{
 public:
     Event() = default;
     ~Event() override = default;
+    Event(const Event& event) = default;
 
     virtual string  getDescription() const = 0;
     virtual string applyEncounter(Player& player) const = 0;
