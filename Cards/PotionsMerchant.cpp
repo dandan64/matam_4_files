@@ -7,6 +7,8 @@
 #include "Event.h"
 #include "utilities.h"
 
+using std::string;
+
 
 string PotionsMerchant::applyEncounter(Player& player) const{
     return player.playPotionsMerchant();

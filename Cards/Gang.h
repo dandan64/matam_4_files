@@ -6,6 +6,9 @@
 #include "Encounter.h"
 #include <string>
 
+
+using std::string;
+
 class Gang : public Encounter{
     int m_CombatPower;
     int m_Loot;

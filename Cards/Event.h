@@ -4,6 +4,7 @@
 #include "Card.h"
 #include "Players/Player.h"
 
+using std::string;
 
 class Event : public Card{
 

@@ -10,45 +10,23 @@ FAILED_TESTS=0
 FAILED_TEST_NUMBERS=""
 
 # Number of tests to run, can be increased as needed
-TESTS_TO_RUN=1232
-
-echo "
-     XXXXXXXXY          XXXXXXX
-        XXXXX            XXXXX
-        XXXXX           XXXXX   X             X                                      XX
-        XXXXXX         XXXXXX   XXXXXXXXXXXXXXX XXXXXXX         XXXXXX     XXXXXXXXXXX XXXXXX     XXXXXX  XXXXXW  XXXXXXXXXXXXYXXXXXXX     XXXXXX
-        XXXXXXX       XXXXXXX   X    WXXX     X   XXXXX         XXXX     XXXX       XX  XXXX        XXX    XXXX   XXX     XXX    XXXXXX      XXX
-        XX XXXXX     XXX XXXXY       XXXX          XXXXX       XXXXX   XXXXX         X  YXXX       XXXX    XXXW  XX       XXX    XXX XXXX    XXY
-        XX  XXXXX   XXX   XXXX       YXXX         XX XXXY     XX XXX   XXXX             YXXX       WXXX    XXXWXXX        XXX    XXX  XXXX   XX
-       XXX   XXXXX XXX    XXXX       YXXX         XX  XXXY   XX  XXXX XXXX               XXXXXXXXXXXXXX    XXXXXXXX       XXXX   XXX   XXXX  XXX
-       XXX    XXXX XX     XXXX       YXXX         XX   XXXX XX   XXXX XXXX              XXXX        XXX    XXX  XXXX      XXX    XX      XXXXXX
-       XXX     XXXXX      XXXX       YXXX         XX   XXXXXX    XXXX  XXXX          X   XXX       XXXX    XXXZ  XXXX     XXXX   XX       XXXXX
-       XXX     XXXXX      XXXX       YXXX         XX    XXXXY    XXXX   XXXXX      XXX  WXXX       XXXX    XXX     XXXX   XXXX   XX        XXXX
-     XXXXXXX    XXX     XXXXXXX     XXXXXXX     XXXXX    XXX    XXXXXX   WXXXXXXXXXXXX WXXXXX     XXXXXXX XXXXX     XXXX XXXXX YXXXXX        XX
-                 Y                                        X                          XX                               XXXX                    X
-                                                                                                                        XXX         X
-                                                                                                                          XXXXXXXXX
-"
+TESTS_TO_RUN=1231
 
 # Main loop for running tests
-for ((testNumber=0; testNumber<=TESTS_TO_RUN; testNumber++)); do
-    inFile="fileTests/inFiles/test${testNumber}.in"
-    deckFile="fileTests/inFiles/test${testNumber}.deck"
-    resultFile="fileTests/outFiles/test${testNumber}.result"
-    expectedFile="fileTests/outFiles/test${testNumber}.out"
-    valgrindLogFile="fileTests/inFiles/test${testNumber}.valgrind_log"
+for i in fileTests/inFiles/test*.in; do
+    testNumber=${i//[^0-9]/} # Extracting test number from filename
+
+    if [[ $testNumber -gt $TESTS_TO_RUN ]]; then
+        continue
+    fi
 
     echo "Running test $testNumber >>>"
 
     # Run the game simulation and output results to a file
-<<<<<<< HEAD
-    ./FileTester "$deckFile" "$inFile" "$resultFile"
-=======
     ./FileTester "fileTests/inFiles/test${testNumber}.deck" "$i" "fileTests/outFiles/test${testNumber}.result"
->>>>>>> 5628fd478c7856a086ffec53b095ecd3ea13d00c
 
     # Compare the generated result with the expected result
-    if diff "$expectedFile" "$resultFile" > /dev/null; then
+    if diff "fileTests/outFiles/test${testNumber}.out" "fileTests/outFiles/test${testNumber}.result" > /dev/null; then
         echo -e "Game Simulation: ${GREEN}pass${NC},"
     else
         echo -e "Game Simulation: ${RED}fail${NC}"
@@ -57,7 +35,8 @@ for ((testNumber=0; testNumber<=TESTS_TO_RUN; testNumber++)); do
     fi
 
     # Run Valgrind to check for memory leaks
-    valgrind --log-file="$valgrindLogFile" --leak-check=full ./FileTester "$inFile" "$deckFile" "fileTests/outFiles/test${testNumber}.vresult" > /dev/null 2>&1
+    valgrindLogFile="fileTests/inFiles/test${testNumber}.valgrind_log"
+    valgrind --log-file="$valgrindLogFile" --leak-check=full ./FileTester "$i" "fileTests/inFiles/test${testNumber}.deck" "fileTests/outFiles/test${testNumber}.vresult" > /dev/null 2>&1
 
     # Clean up the Valgrind result file as it's no longer needed
     rm -f "fileTests/outFiles/test${testNumber}.vresult"
@@ -100,26 +79,6 @@ if [ $FAILED_TESTS -eq 0 ]; then
             ┗┻┛┗┻┛┗┻┛•┗┻┛┗┛┛┗┗┛┻•┻┗┛
 ${NC}"
 else
-<<<<<<< HEAD
-    echo -e "${RED}
-     XXXXXXXXY          XXXXXXX
-        XXXXX            XXXXX
-        XXXXX           XXXXX   X             X                                      XX
-        XXXXXX         XXXXXX   XXXXXXXXXXXXXXX XXXXXXX         XXXXXX     XXXXXXXXXXX XXXXXX     XXXXXX  XXXXXW  XXXXXXXXXXXXYXXXXXXX     XXXXXX
-        XXXXXXX       XXXXXXX   X    WXXX     X   XXXXX         XXXX     XXXX       XX  XXXX        XXX    XXXX   XXX     XXX    XXXXXX      XXX
-        XX XXXXX     XXX XXXXY       XXXX          XXXXX       XXXXX   XXXXX         X  YXXX       XXXX    XXXW  XX       XXX    XXX XXXX    XXY
-        XX  XXXXX   XXX   XXXX       YXXX         XX XXXY     XX XXX   XXXX             YXXX       WXXX    XXXWXXX        XXX    XXX  XXXX   XX
-       XXX   XXXXX XXX    XXXX       YXXX         XX  XXXY   XX  XXXX XXXX               XXXXXXXXXXXXXX    XXXXXXXX       XXXX   XXX   XXXX  XXX
-       XXX    XXXX XX     XXXX       YXXX         XX   XXXX XX   XXXX XXXX              XXXX        XXX    XXX  XXXX      XXX    XX      XXXXXX
-       XXX     XXXXX      XXXX       YXXX         XX   XXXXXX    XXXX  XXXX          X   XXX       XXXX    XXXZ  XXXX     XXXX   XX       XXXXX
-       XXX     XXXXX      XXXX       YXXX         XX    XXXXY    XXXX   XXXXX      XXX  WXXX       XXXX    XXX     XXXX   XXXX   XX        XXXX
-     XXXXXXX    XXX     XXXXXXX     XXXXXXX     XXXXX    XXX    XXXXXX   WXXXXXXXXXXXX WXXXXX     XXXXXXX XXXXX     XXXX XXXXX YXXXXX        XX
-                 Y                                        X                          XX                               XXXX                    X
-                                                                                                                        XXX         X
-                                                                                                                          XXXXXXXXX
-    "
-=======
->>>>>>> 5628fd478c7856a086ffec53b095ecd3ea13d00c
     echo -e "\n${RED}Failed $FAILED_TESTS tests.${NC}"
     echo -e "Failed tests: \n${PURPLE}${FAILED_TEST_NUMBERS}${NC}\n"
     echo "To see the differences for a failed test, use the diff.sh script. For example:"
@@ -127,4 +86,4 @@ else
     echo "Make sure you have given execute permission to the script before using it. Run the following command to do so:"
     echo -e "${BLUE}chmod +x diff.sh${NC}"
 fi
-echo "Increase TESTS_TO_RUN in tester.sh to run more tests (up to 1232)."
+echo "Increase TESTS_TO_RUN in tester.sh to run more tests (up to 1231)."

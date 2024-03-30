@@ -3,6 +3,9 @@
 #define EX4_SUPPLIED1_ENCOUNTER_H
 #include "Card.h"
 
+using std::string;
+
+
 class Encounter : public Card{
 
     public:

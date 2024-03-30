@@ -3,3 +3,4 @@
 //
 
 #include "Event.h"
+using std::string;

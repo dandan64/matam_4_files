@@ -3,3 +3,4 @@
 //
 
 #include "Encounter.h"
+using std::string;

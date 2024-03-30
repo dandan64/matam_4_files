@@ -24,21 +24,30 @@
 #include "Players/SelectTypes.h"
 #include "Cards/Encounter.h"
 static int MAX_LEVEL = 10;
+static int MIN_PLAYERS = 2;
+static int MAX_PLAYERS = 6;
+static int MIN_GANG = 2;
+static int MIN_DECK = 2;
+static int MIN_PLAYER_NAME = 3;
+static int MAX_PLAYER_NAME = 15;
+
+
+
 
 
 
 
 void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_cards){
     vector<std::unique_ptr<Card>> tmpCards;
-    int num = 0;
-    deckFile>>num;
-    if(deckFile.bad() || deckFile.fail() || num < 2){
+    int membersInGang = 0;
+    deckFile>>membersInGang;
+    if(deckFile.bad() || deckFile.fail() || membersInGang < MIN_GANG){
         throw std::runtime_error("Invalid Cards File");
     }
-    for(int i = 0; i < num; ++i){
+    for(int i = 0; i < membersInGang; ++i){
         InitializeCard(deckFile, tmpCards);
     }
-    if(int(tmpCards.size()) != num){
+    if(int(tmpCards.size()) != membersInGang){
         throw std::runtime_error("Invalid Cards File");
     }
     int combatPower = 0 , loot = 0, damage = 0;
@@ -52,7 +61,7 @@ void InitializeGang(std::istream& deckFile, vector<std::unique_ptr<Card>>& m_car
             throw (std::runtime_error ("Invalid Cards File"));
         }
     }
-    m_cards.emplace_back(new Gang(combatPower,loot, damage, num));
+    m_cards.emplace_back(new Gang(combatPower,loot, damage, membersInGang));
 }
 
 void InitializeGoblin(vector<std::unique_ptr<Card>>& m_cards){
@@ -114,7 +123,8 @@ bool checkFirstWord(const std::string& name){
             return isValid;
         }
     }
-    if(name.length() < 3 || name.length() > 15){
+    int nameLength = name.length();
+    if(nameLength < MIN_PLAYER_NAME || nameLength > MAX_PLAYER_NAME){
         isValid = false;
     }
     return isValid;
@@ -182,7 +192,7 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     readAndInitializeCards(deckFile, m_cards);
     deckFile.close();
     int cardSize = m_cards.size();
-    if(cardSize < 2){
+    if(cardSize < MIN_DECK){
         throw std::runtime_error("Invalid Cards File");
     }
 
@@ -193,7 +203,7 @@ Mtmchkin::Mtmchkin(const string& deckPath, const string& playersPath) {
     readAndInitializePlayer(playerFile, m_players);
     playerFile.close();
     int players = m_players.size();
-    if(players < 2 || players > 6){
+    if(players < MIN_PLAYERS || players > MAX_PLAYERS){
         throw std::runtime_error("Invalid Players File");
     }
 

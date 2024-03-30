@@ -6,6 +6,8 @@
 #include "Players/Player.h"
 #include "Event.h"
 
+using std::string;
+
 class SolarEclipse : public Event{
 public:
     SolarEclipse() = default;

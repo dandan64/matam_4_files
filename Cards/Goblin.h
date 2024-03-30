@@ -4,6 +4,7 @@
 #include "Card.h"
 #include "Encounter.h"
 
+using std::string;
 
 class Goblin : public Encounter{
     int m_CombatPower = 5;

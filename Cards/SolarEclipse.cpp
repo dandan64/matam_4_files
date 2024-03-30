@@ -4,6 +4,7 @@
 #include "Event.h"
 #include "SolarEclipse.h"
 #include "Players/Player.h"
+using std::string;
 
 
 string SolarEclipse::applyEncounter(Player& player) const{

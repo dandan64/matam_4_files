@@ -1,6 +1,11 @@
 #include "Dragon.h"
 #include "Players/Player.h"
 #include "utilities.h"
+
+using std::string;
+
+
+
 string Dragon::applyEncounter(Player& player) const {
     if(m_CombatPower < player.getCombatPower()){
         player.levelUp();

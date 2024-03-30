@@ -3,6 +3,8 @@
 #include <string>
 #include "../Players/Player.h"
 
+using std::string;
+
 
 class Card {
 protected:

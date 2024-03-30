@@ -7,6 +7,8 @@
 #include "Card.h"
 #include "Encounter.h"
 
+using std::string;
+
 
 class Dragon : public Encounter{
     int m_CombatPower = 17;

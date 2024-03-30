@@ -1,4 +1,4 @@
-![Header Image](https://i.imgur.com/5IuOeH6.png)
+![Header Image](https://i.imgur.com/l9dk1ZL.png)
 # 234124-ex4-mtmchkin-test2024A
 1. **First**, create a `test` folder in the root directory of the project. 
 
@@ -48,7 +48,3 @@ chmod +x diff.sh
 ```
 This command will display any discrepancies, aiding in your debugging process.
 No Differences Found? If diff.sh does not show any differences, it suggests that the test's expected and actual results match. The failure may be due to external factors or configurations.
-<<<<<<< HEAD
-![Alt text](https://i.imgur.com/071tfcv.png)
-=======
->>>>>>> 5628fd478c7856a086ffec53b095ecd3ea13d00c

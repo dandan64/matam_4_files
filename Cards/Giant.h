@@ -5,6 +5,9 @@
 #include "Encounter.h"
 #include "Card.h"
 
+using std::string;
+
+
 class Giant : public Encounter{
     int m_CombatPower = 12;
     int m_Loot = 5;

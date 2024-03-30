@@ -2,6 +2,9 @@
 #include "Gang.h"
 #include "utilities.h"
 
+
+using std::string;
+
 Gang::Gang(int CombatPower, int Loot, int Damage, int gangSize) :
     m_CombatPower(CombatPower), m_Loot(Loot), m_Damage(Damage), m_gangSize(gangSize){}
 

@@ -6,6 +6,8 @@
 #define EX4_SUPPLIED1_POTIONSMERCHANT_H
 #include "Event.h"
 
+using std::string;
+
 class PotionsMerchant : public Event{
 public:
     PotionsMerchant() = default;
