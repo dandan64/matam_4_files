@@ -7,13 +7,17 @@
 #include "Card.h"
 #include "Encounter.h"
 
+static int const COMBAT_POWER = 17;
+static int const LOOT = 100;
+static int const DANAMGE = 9001;
+
 using std::string;
 
 
 class Dragon : public Encounter{
-    int m_CombatPower = 17;
-    int m_Loot = 100;
-    int m_Damage = 9001;
+    int m_CombatPower = COMBAT_POWER;
+    int m_Loot = LOOT;
+    int m_Damage = DANAMGE;
 
 public:
 
